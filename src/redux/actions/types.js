@@ -1,0 +1,5 @@
+export const INCREMENT = 'INCREMENT';
+export const DECREMENT = 'DECREMENT';
+export const DYNAMIC_INCREMENT = 'DYNAMIC_INCREMENT';
+export const DYNAMIC_DECREMENT = 'DYNAMIC_DECREMENT';
+export const RESET = 'RESET';
