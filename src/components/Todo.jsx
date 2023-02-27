@@ -1,6 +1,9 @@
 import { useDispatch } from "react-redux";
 import cancelImage from "../assets/images/cancel.png";
-import { deleteTodo, toggleColor, toggleTodo } from "../redux/features/todo/actions";
+import { removeTodo, toggleColor, toggleTodo } from "../redux/features/todo/actions";
+import deleteTodo from "../redux/thunk/deleteTodo";
+import updateTodoColor from "../redux/thunk/updateTodoColor";
+import updateTodoStatus from "../redux/thunk/updateTodoStatus";
 
 export default function Todo({ todo }) {
     const dispatch = useDispatch();
@@ -12,7 +15,7 @@ export default function Todo({ todo }) {
                     type="checkbox"
                     className="opacity-0 absolute rounded-full"
                     checked={completed}
-                    onChange={() => dispatch(toggleTodo(id))}
+                    onChange={() => dispatch(updateTodoStatus(todo))}
                 />
                 <svg className={`${completed ? 'block' : "hidden"} fill-current w-3 h-3 text-green-500 pointer-events-none`} viewBox="0 0 20 20" > <path d="M0 11l2-2 5 5L18 3l2 2L7 18z" /> </svg>
             </div>
@@ -20,15 +23,15 @@ export default function Todo({ todo }) {
             <div className={`select-none flex-1 ${completed && "line-through"}`}>{text}</div>
 
             <div
-                onClick={e => dispatch(toggleColor(id, e.target.getAttribute('color')))}
+                onClick={e => dispatch(updateTodoColor({id, color: e.target.getAttribute('color')}))}
                 color="green"
                 className={`flex-shrink-0 h-4 w-4 rounded-full border-2 ml-auto cursor-pointer border-green-500 hover:bg-green-500 ${color === 'green' && 'bg-green-500'}`}></div>
             <div
-                onClick={e => dispatch(toggleColor(id, e.target.getAttribute('color')))}
+                onClick={e => dispatch(updateTodoColor({id, color: e.target.getAttribute('color')}))}
                 color="yellow"
                 className={`flex-shrink-0 h-4 w-4 rounded-full border-2 ml-auto cursor-pointer border-yellow-500 hover:bg-yellow-500 ${color === 'yellow' && 'bg-yellow-500'} `}></div>
             <div
-                onClick={e => dispatch(toggleColor(id, e.target.getAttribute('color')))}
+                onClick={e => dispatch(updateTodoColor({id, color: e.target.getAttribute('color')}))}
                 color="red"
                 className={`flex-shrink-0 h-4 w-4 rounded-full border-2 ml-auto cursor-pointer border-red-500 hover:bg-red-500 ${color === 'red' && 'bg-red-500'} `}></div>
 

@@ -1,15 +1,9 @@
 {
   "todos": [
     {
+      "completed": true,
+      "text": "Learn Redux Basics",
       "id": 1,
-      "text": "Learn Vanilla JavaScript",
-      "completed": true,
-      "color": "yellow"
-    },
-    {
-      "id": 2,
-      "text": "Learn Modern ES6+ JavaScript",
-      "completed": true,
       "color": "red"
     },
     {
@@ -21,89 +15,26 @@
     {
       "id": 4,
       "text": "Learn Redux Basics",
-      "completed": true,
-      "color": "red"
+      "completed": false,
+      "color": "yellow"
     },
     {
       "id": 5,
       "text": "Learn Redux fundamentals",
       "completed": true,
-      "color": "red"
+      "color": "yellow"
     },
     {
       "id": 6,
       "text": "learn Redux",
-      "completed": false
+      "completed": true,
+      "color": "yellow"
     },
     {
       "id": 7,
       "text": "Learn Redux Toolkit",
-      "completed": false
-    },
-    {
-      "id": 8,
-      "text": "Test",
-      "completed": false
-    },
-    {
-      "id": 9,
-      "text": "test 2",
-      "completed": false
-    },
-    {
-      "id": 10,
-      "text": "বাংলা টেস্ট",
-      "completed": false
-    },
-    {
-      "id": 11,
-      "text": "বাংলা দুই",
-      "completed": false
-    },
-    {
-      "text": "Aut assumenda et deb",
-      "completed": false,
-      "id": 12
-    },
-    {
-      "text": "Mollitia dolorem ali",
-      "completed": false,
-      "id": 13
-    },
-    {
-      "text": "Mollitia dolorem ali",
-      "completed": false,
-      "id": 14
-    },
-    {
-      "text": "Magni dolorem qui di",
-      "completed": false,
-      "id": 15
-    },
-    {
-      "text": "Ab velit dolor velit",
-      "completed": false,
-      "id": 16
-    },
-    {
-      "text": "Aliquip in voluptate",
-      "completed": false,
-      "id": 17
-    },
-    {
-      "text": "Dolor est laboris el",
-      "completed": false,
-      "id": 18
-    },
-    {
-      "text": "In odit voluptate cu",
-      "completed": false,
-      "id": 19
-    },
-    {
-      "text": "sayem khan",
-      "completed": false,
-      "id": 20
+      "completed": true,
+      "color": "red"
     }
   ]
 }
