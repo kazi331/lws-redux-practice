@@ -12,10 +12,11 @@ const todoReducer = (state = initialState, action) => {
         case LOAD_TODOS:
             return action.payload
         case ADD:
-            return [...state, { content: action.payload, id: maxId(state) + 1, completed: false }]
+            return [...state, { text: action.payload, id: maxId(state) + 1 }]
         case DELETE:
             return state.filter(todo => todo.id !== action.payload)
         case TOGGLE:
+            console.log('action', action);
             return state.map(todo => todo.id === action.payload ? { ...todo, completed: !todo.completed } : todo);
         case COLOR:
             return state.map(todo => todo.id === action.payload.id ? { ...todo, color: action.payload.color } : todo);

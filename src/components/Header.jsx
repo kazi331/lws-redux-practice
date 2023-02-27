@@ -3,7 +3,8 @@ import { useDispatch } from "react-redux";
 import tickImage from "../assets/images/double-tick.png";
 import noteImage from "../assets/images/notes.png";
 import plusImage from "../assets/images/plus.png";
-import { addTodo, clearCompleted, completeAll } from "../redux/features/todo/actions";
+import { clearCompleted, completeAll } from "../redux/features/todo/actions";
+import createTodo from "../redux/thunk/createTodo";
 
 export default function Header() {
     const dispatch = useDispatch()
@@ -13,7 +14,7 @@ export default function Header() {
             <form
                 onSubmit={(e) => {
                     e.preventDefault();
-                    dispatch(addTodo(content));
+                    dispatch(createTodo(content));
                     setContent('')
                 }}
                 className="flex items-center bg-gray-100 px-4 py-4 rounded-md">
