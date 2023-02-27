@@ -1,26 +1,16 @@
-import { ADD, CLEAR_COMPLETED, COLOR, COMPLETE_ALL, DELETE, TOGGLE } from "./actionTypes";
+import { ADD, CLEAR_COMPLETED, COLOR, COMPLETE_ALL, DELETE, LOAD_TODOS, TOGGLE } from "./actionTypes";
 
 const maxId = (state) => {
     return state.reduce((maxId, todo) => Math.max(todo.id, maxId), 0);
 }
 
-const initialState = [
-    {
-        content: 'Learn Redux',
-        id: 1,
-        completed: false,
-        color: 'green'
-    },
-    {
-        content: 'Learn React',
-        id: 2,
-        completed: true,
-    },
-]
+const initialState = []
 
 
 const todoReducer = (state = initialState, action) => {
     switch (action.type) {
+        case LOAD_TODOS:
+            return action.payload
         case ADD:
             return [...state, { content: action.payload, id: maxId(state) + 1, completed: false }]
         case DELETE:

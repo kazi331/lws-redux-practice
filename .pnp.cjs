@@ -38,6 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:7de1a3e30ffd766f2f443bd2de865e89673a3e73119b18fa739637d96a835a75b3324f2d631cbf97b2a22778cc2842c8f5f6cc44ea4016ea1c4b6826f0ba8e0e#npm:18.2.0"],\
             ["react-redux", "virtual:7de1a3e30ffd766f2f443bd2de865e89673a3e73119b18fa739637d96a835a75b3324f2d631cbf97b2a22778cc2842c8f5f6cc44ea4016ea1c4b6826f0ba8e0e#npm:8.0.5"],\
             ["redux", "npm:4.2.1"],\
+            ["redux-thunk", "virtual:7de1a3e30ffd766f2f443bd2de865e89673a3e73119b18fa739637d96a835a75b3324f2d631cbf97b2a22778cc2842c8f5f6cc44ea4016ea1c4b6826f0ba8e0e#npm:2.4.2"],\
             ["tailwindcss", "virtual:7de1a3e30ffd766f2f443bd2de865e89673a3e73119b18fa739637d96a835a75b3324f2d631cbf97b2a22778cc2842c8f5f6cc44ea4016ea1c4b6826f0ba8e0e#npm:3.2.7"],\
             ["vite", "virtual:7de1a3e30ffd766f2f443bd2de865e89673a3e73119b18fa739637d96a835a75b3324f2d631cbf97b2a22778cc2842c8f5f6cc44ea4016ea1c4b6826f0ba8e0e#npm:4.1.4"]\
           ],\
@@ -2047,6 +2048,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:7de1a3e30ffd766f2f443bd2de865e89673a3e73119b18fa739637d96a835a75b3324f2d631cbf97b2a22778cc2842c8f5f6cc44ea4016ea1c4b6826f0ba8e0e#npm:18.2.0"],\
             ["react-redux", "virtual:7de1a3e30ffd766f2f443bd2de865e89673a3e73119b18fa739637d96a835a75b3324f2d631cbf97b2a22778cc2842c8f5f6cc44ea4016ea1c4b6826f0ba8e0e#npm:8.0.5"],\
             ["redux", "npm:4.2.1"],\
+            ["redux-thunk", "virtual:7de1a3e30ffd766f2f443bd2de865e89673a3e73119b18fa739637d96a835a75b3324f2d631cbf97b2a22778cc2842c8f5f6cc44ea4016ea1c4b6826f0ba8e0e#npm:2.4.2"],\
             ["tailwindcss", "virtual:7de1a3e30ffd766f2f443bd2de865e89673a3e73119b18fa739637d96a835a75b3324f2d631cbf97b2a22778cc2842c8f5f6cc44ea4016ea1c4b6826f0ba8e0e#npm:3.2.7"],\
             ["vite", "virtual:7de1a3e30ffd766f2f443bd2de865e89673a3e73119b18fa739637d96a835a75b3324f2d631cbf97b2a22778cc2842c8f5f6cc44ea4016ea1c4b6826f0ba8e0e#npm:4.1.4"]\
           ],\
@@ -2549,6 +2551,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["redux", "npm:4.2.1"],\
             ["@babel/runtime", "npm:7.21.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["redux-thunk", [\
+        ["npm:2.4.2", {\
+          "packageLocation": "./.yarn/cache/redux-thunk-npm-2.4.2-3acdaaf7b0-c7f757f6c3.zip/node_modules/redux-thunk/",\
+          "packageDependencies": [\
+            ["redux-thunk", "npm:2.4.2"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:7de1a3e30ffd766f2f443bd2de865e89673a3e73119b18fa739637d96a835a75b3324f2d631cbf97b2a22778cc2842c8f5f6cc44ea4016ea1c4b6826f0ba8e0e#npm:2.4.2", {\
+          "packageLocation": "./.yarn/__virtual__/redux-thunk-virtual-9485a0cc5b/0/cache/redux-thunk-npm-2.4.2-3acdaaf7b0-c7f757f6c3.zip/node_modules/redux-thunk/",\
+          "packageDependencies": [\
+            ["redux-thunk", "virtual:7de1a3e30ffd766f2f443bd2de865e89673a3e73119b18fa739637d96a835a75b3324f2d631cbf97b2a22778cc2842c8f5f6cc44ea4016ea1c4b6826f0ba8e0e#npm:2.4.2"],\
+            ["@types/redux", null],\
+            ["redux", "npm:4.2.1"]\
+          ],\
+          "packagePeers": [\
+            "@types/redux",\
+            "redux"\
           ],\
           "linkType": "HARD"\
         }]\

@@ -1,5 +1,11 @@
-import { ADD, CLEAR_COMPLETED, COLOR, COMPLETE_ALL, DELETE, TOGGLE, } from "./actionTypes"
+import { ADD, CLEAR_COMPLETED, COLOR, COMPLETE_ALL, DELETE, LOAD_TODOS, TOGGLE, } from "./actionTypes"
 
+export const loadTodos = (todos) => {
+    return {
+        type: LOAD_TODOS,
+        payload: todos
+    }
+}
 export const addTodo = (content) => {
     return {
         type: ADD,

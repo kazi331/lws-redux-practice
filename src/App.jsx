@@ -1,10 +1,17 @@
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import TodoList from "./components/TodoList";
 import './index.css'
+import fetchTodos from "./redux/thunk/fetchTodos";
 
 function App() {
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(fetchTodos)
+    }, [])
     return (
         <div className="grid place-items-center bg-blue-100 h-screen px-6 font-sans">
             <Navbar />
@@ -15,7 +22,7 @@ function App() {
                 <hr className="mt-4" />
 
                 <TodoList />
-                
+
                 <hr className="mt-4" />
 
                 <Footer />
