@@ -16,7 +16,6 @@ const todoReducer = (state = initialState, action) => {
         case DELETE:
             return state.filter(todo => todo.id !== action.payload)
         case TOGGLE:
-            console.log('action', action);
             return state.map(todo => todo.id === action.payload ? { ...todo, completed: !todo.completed } : todo);
         case COLOR:
             return state.map(todo => todo.id === action.payload.id ? { ...todo, color: action.payload.color } : todo);

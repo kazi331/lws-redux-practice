@@ -6,7 +6,7 @@ export default function TodoList() {
     const filter = useSelector(state => state.filter)
     const { status, colors } = filter
     return (
-        <div className="mt-2 text-gray-700 text-sm max-h-[300px] overflow-y-auto">
+        <div className="mt-2 text-gray-700 max-h-[300px] overflow-auto text-sm px-4 ">
             {!todos?.length && <div className="text-center text-yellow-500 font-bold text-lg">List is empty</div>}
             {todos
                 .filter(todo => {

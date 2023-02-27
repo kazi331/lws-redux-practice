@@ -969,7 +969,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["autoprefixer", "virtual:7de1a3e30ffd766f2f443bd2de865e89673a3e73119b18fa739637d96a835a75b3324f2d631cbf97b2a22778cc2842c8f5f6cc44ea4016ea1c4b6826f0ba8e0e#npm:10.4.13"],\
             ["@types/postcss", null],\
             ["browserslist", "npm:4.21.5"],\
-            ["caniuse-lite", "npm:1.0.30001457"],\
+            ["caniuse-lite", "npm:1.0.30001458"],\
             ["fraction.js", "npm:4.2.0"],\
             ["normalize-range", "npm:0.1.2"],\
             ["picocolors", "npm:1.0.0"],\
@@ -1084,6 +1084,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001457-2a5d99be1f-f311a7c509.zip/node_modules/caniuse-lite/",\
           "packageDependencies": [\
             ["caniuse-lite", "npm:1.0.30001457"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:1.0.30001458", {\
+          "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001458-e6c437bcdd-258cc5a25b.zip/node_modules/caniuse-lite/",\
+          "packageDependencies": [\
+            ["caniuse-lite", "npm:1.0.30001458"]\
           ],\
           "linkType": "HARD"\
         }]\

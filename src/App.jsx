@@ -4,7 +4,6 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import TodoList from "./components/TodoList";
-import './index.css'
 import fetchTodos from "./redux/thunk/fetchTodos";
 
 function App() {
@@ -13,21 +12,18 @@ function App() {
         dispatch(fetchTodos)
     }, [])
     return (
-        <div className="grid place-items-center bg-blue-100 h-screen px-6 font-sans">
+        <>
             <Navbar />
-
-            <div className="w-full max-w-3xl shadow-lg rounded-lg p-6 bg-white">
-                <Header />
-
-                <hr className="mt-4" />
-
-                <TodoList />
-
-                <hr className="mt-4" />
-
-                <Footer />
+            <div className="grid place-items-center min-h-[calc(100vh-60px)] bg-blue-100 px-6 font-sans py-10">
+                <div className="w-full max-w-3xl shadow-lg rounded-lg p-6 bg-white ">
+                    <Header />
+                    <hr className="mt-4" />
+                    <TodoList />
+                    <hr className="mt-4" />
+                    <Footer />
+                </div>
             </div>
-        </div>
+        </>
     );
 }
 
