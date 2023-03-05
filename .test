@@ -1,6 +1,0 @@
-.test
-*/.vite
-node_modules
-node_modules/*
-.yarn
-.vite
