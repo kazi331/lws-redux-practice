@@ -4,7 +4,7 @@ const { createSlice } = require("@reduxjs/toolkit")
 
 const dynamicCounterSlice = createSlice({
     name: "dynamicCounter",
-    initialState: {count: 5},
+    initialState: {count: 0},
     reducers: {
         increment: (state, action) => {
             state.count += action.payload
