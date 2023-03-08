@@ -6,10 +6,11 @@ import VideoItem from './VideoItem';
 
 const Gallery = () => {
     const dispatch = useDispatch();
-    useEffect(() => {
-        dispatch(fetchVideos())
-    }, [dispatch])
+    const {tags, search } = useSelector(state => state.filter)
     const { videos, isLoading, isError, error } = useSelector(state => state.videos)
+    useEffect(() => {
+        dispatch(fetchVideos({tags, search}))
+    }, [dispatch, tags, search])
     // render content 
     let content;
     if (isLoading) content = <Loading />
