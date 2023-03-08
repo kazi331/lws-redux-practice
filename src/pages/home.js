@@ -1,12 +1,12 @@
 import React from 'react'
-import Filter from '../components/home/Filter'
 import Gallery from '../components/home/Gallery'
-import Pagination from '../components/home/Pagination'
+import Tags from '../components/home/Tags'
+import Pagination from '../components/ui/Pagination'
 
 const Home = () => {
   return (
     <>
-      <Filter />
+      <Tags />
       <Gallery />
       <Pagination />
     </>

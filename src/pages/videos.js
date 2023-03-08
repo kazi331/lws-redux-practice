@@ -1,9 +1,11 @@
 import React from 'react'
-import Description from '../components/video/Description'
+import { useParams } from 'react-router-dom'
+import Description from '../components/video/descripton/Description'
 import Player from '../components/video/Player'
-import Related from '../components/video/Related'
+import Related from '../components/video/related/Related'
 
 const Videos = () => {
+    const {id } = useParams();
     return (
         <section className="pt-6 pb-20">
             <div className="mx-auto max-w-7xl px-2 pb-20 min-h-[400px]">
