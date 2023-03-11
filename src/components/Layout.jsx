@@ -1,16 +1,15 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
-import Footer from './Footer'
-import Navbar from './Navbar'
-
-const Layout = () => {
+export default function Layout({ children }) {
     return (
-        <>
-            <Navbar />
-            <Outlet />
-            <Footer />
-        </>
-    )
-}
+        <div className="App">
+            <div className="header">
+                <h1>Expense Tracker</h1>
+            </div>
 
-export default Layout
+            <div className="main">
+                <div className="container">{children}</div>
+            </div>
+
+            <div className="footer">&copy;2022 Learn with Sumit</div>
+        </div>
+    );
+}
