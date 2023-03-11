@@ -1,18 +1,44 @@
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { createTransaction } from '../features/transactions/transactionSlice';
+import { createTransaction, enableEditiong, updateTransaction } from '../features/transactions/transactionSlice';
 
 export default function Form() {
-    const [data, setData] = useState({ name: "", type: "", amount: 0 })
     const dispatch = useDispatch();
+    const [data, setData] = useState({ name: "", type: "", amount: "" })
+    const [editMode, setEditMode] = useState(false)
     const { transactions } = useSelector(state => state.transactions)
-    const maxId = transactions.reduce((acc, cur) => Math.max(acc, cur.id), 0)
+    const { editing } = useSelector(state => state.transactions)
+    const { isLoading, isError } = useSelector(state => state.transactions)
 
+    const reset = () => {
+        setData({ name: "", type: "", amount: "" })
+    }
+    // form submit handle
     const handleSubmit = e => {
         e.preventDefault();
-        dispatch(createTransaction({ id: maxId + 1, ...data, amount: Number(data.amount) }))
+        if (editMode) {
+            dispatch(updateTransaction({ id: editing.id, data }))
+            reset();
+            dispatch(enableEditiong({}))
+        } else {
+            const maxId = transactions.reduce((acc, cur) => Math.max(acc, cur.id), 0)
+            dispatch(createTransaction({ id: maxId + 1, ...data, amount: Number(data.amount) }))
+            reset();
+        }
     }
+
+    useEffect(() => {
+        if (editing.id) {
+            setEditMode(true);
+            setData(editing)
+
+        } else {
+            setEditMode(false)
+            reset();
+        }
+    }, [editing])
+
 
 
     return (
@@ -68,16 +94,16 @@ export default function Form() {
                         placeholder="3000"
                         name="transaction_amount"
                         id="transaction_amount"
-                        
-                        // value={data.amount}
+
+                        value={data.amount}
                         onChange={e => setData({ ...data, amount: e.target.value })}
                     />
                 </div>
 
-                <button className="btn">Add Transaction</button>
+                <button disabled={isLoading} className="btn">{editMode ? "Update Transaction" : "Add Transaction"}</button>
 
             </form>
-            <button className="btn cancel_edit">Cancel Edit</button>
+            {editMode && <button onClick={() => dispatch(enableEditiong({}))} className="btn cancel_edit">Cancel Edit</button>}
         </div>
     );
 }

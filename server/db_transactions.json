@@ -1,22 +1,40 @@
 {
-    "transactions": [
-        {
-            "id": 1,
-            "name": "Salary from Google",
-            "type": "income",
-            "amount": 1000000
-        },
-        {
-            "id": 12,
-            "name": "Family Expenses",
-            "type": "expense",
-            "amount": 200000
-        },
-        {
-            "id": 13,
-            "name": "Family Expenses",
-            "type": "expense",
-            "amount": 200000
-        }
-    ]
+  "transactions": [
+    {
+      "id": 14,
+      "name": "Jack Reyes teste",
+      "type": "income",
+      "amount": "1202"
+    },
+    {
+      "name": "Steel Burns",
+      "type": "expense",
+      "amount": "70",
+      "id": 15
+    },
+    {
+      "id": 16,
+      "name": "Scott Baldwin",
+      "type": "income",
+      "amount": "411"
+    },
+    {
+      "id": 17,
+      "name": "Leigh Ray",
+      "type": "expense",
+      "amount": "211"
+    },
+    {
+      "id": 18,
+      "name": "Stacey Gould",
+      "type": "expense",
+      "amount": 79
+    },
+    {
+      "id": 19,
+      "name": "Indigo Thornton",
+      "type": "income",
+      "amount": "2323"
+    }
+  ]
 }

@@ -6,7 +6,7 @@ export default function Layout({ children }) {
             </div>
 
             <div className="main">
-                <div className="container">{children}</div>
+                <div className="container " >{children}</div>
             </div>
 
             <div className="footer">&copy;2022 Learn with Sumit</div>

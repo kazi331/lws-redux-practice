@@ -4,11 +4,16 @@ import Layout from "./components/Layout";
 import Transactions from "./components/Transactions/Transactions";
 
 function App() {
+
     return (
         <Layout>
-            <Balance />
-            <Form />
-            <Transactions />
+            <div style={{display: 'flex', alignItems: '', gap: '20px'}}>
+                <div>
+                    <Balance />
+                    <Form />
+                </div>
+                <Transactions />
+            </div>
         </Layout>
     );
 }

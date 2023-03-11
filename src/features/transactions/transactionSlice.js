@@ -2,12 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 import { addTransaction, editTransaction, removeTransaction, viewTransactions } from "./transactionAPI"
 
 
-const initialState = {
-    transactions: [],
-    isLoading: false,
-    isError: false,
-    error: ""
-}
+
 
 // async thunk functions
 export const createTransaction = createAsyncThunk("tracker/addTransaction", async (data) => {
@@ -22,9 +17,8 @@ export const updateTransaction = createAsyncThunk("tracker/updateTransaction", a
 
 
 export const deleteTransaction = createAsyncThunk("tracker/removeTransaction", async (id) => {
-    const res = await removeTransaction(id);
-    console.log(res);
-    return await {res, id};
+    await removeTransaction(id);
+    return id;
 })
 
 
@@ -33,11 +27,27 @@ export const getTransactions = createAsyncThunk("tracker/getTransaction", async 
     return await res;
 })
 
+
+// initial state
+const initialState = {
+    transactions: [],
+    isLoading: false,
+    isError: false,
+    error: "",
+    editing: {},
+}
+
+
 // slice 
 
 const transactionSlice = createSlice({
     name: 'transaction',
     initialState,
+    reducers: {
+        enableEditiong: (state, action ) =>{
+            state.editing = action.payload;
+        }
+    },
     extraReducers: builder => {
         builder
             // view transactions
@@ -103,7 +113,8 @@ const transactionSlice = createSlice({
             .addCase(deleteTransaction.fulfilled, (state, { payload }) => {
                 state.isLoading = false;
                 state.isError = false;
-                state.transactions = state.transactions.filter(item => item.id !== payload.id)
+                
+                state.transactions = state.transactions.filter(item => item.id != payload)
             })
             .addCase(deleteTransaction.rejected, (state, { error }) => {
                 state.isLoading = false;
@@ -117,3 +128,4 @@ const transactionSlice = createSlice({
 
 
 export default transactionSlice.reducer;
+export const {enableEditiong} = transactionSlice.actions;
