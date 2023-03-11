@@ -17,8 +17,8 @@ export const updateTransaction = createAsyncThunk("tracker/updateTransaction", a
 
 
 export const deleteTransaction = createAsyncThunk("tracker/removeTransaction", async (id) => {
-    await removeTransaction(id);
-    return id;
+    const res = await removeTransaction(id);
+    return await res;
 })
 
 
@@ -110,11 +110,11 @@ const transactionSlice = createSlice({
                 state.isError = false;
             })
 
-            .addCase(deleteTransaction.fulfilled, (state, { payload }) => {
+            .addCase(deleteTransaction.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.isError = false;
                 
-                state.transactions = state.transactions.filter(item => item.id != payload)
+                state.transactions = state.transactions.filter(item => item.id != action.meta.arg)
             })
             .addCase(deleteTransaction.rejected, (state, { error }) => {
                 state.isLoading = false;
