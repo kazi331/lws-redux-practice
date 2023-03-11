@@ -6,13 +6,12 @@ import { createTransaction } from '../features/transactions/transactionSlice';
 export default function Form() {
     const [data, setData] = useState({ name: "", type: "", amount: 0 })
     const dispatch = useDispatch();
-    const {transactions} = useSelector(state => state.transactions)
-    const maxId = transactions.reduce((acc, cur) => acc > cur.id, 0)
-    console.log(maxId )
+    const { transactions } = useSelector(state => state.transactions)
+    const maxId = transactions.reduce((acc, cur) => Math.max(acc, cur.id), 0)
 
     const handleSubmit = e => {
         e.preventDefault();
-        // dispatch(createTransaction({ ...data, amount: Number(data.amount) }))
+        dispatch(createTransaction({ id: maxId + 1, ...data, amount: Number(data.amount) }))
     }
 
 
@@ -27,7 +26,7 @@ export default function Form() {
                         type="text"
                         name="transaction_name"
                         id="transaction_name"
-                        placeholder="My Salary"
+                        placeholder="Transaction Name"
                         required
                         value={data.name}
                         onChange={e => setData({ ...data, name: e.target.value })}
@@ -66,11 +65,11 @@ export default function Form() {
                     <label htmlFor="transaction_amount">Amount</label>
                     <input
                         type="number"
-                        placeholder="300"
+                        placeholder="3000"
                         name="transaction_amount"
                         id="transaction_amount"
-
-                        value={data.amount}
+                        
+                        // value={data.amount}
                         onChange={e => setData({ ...data, amount: e.target.value })}
                     />
                 </div>

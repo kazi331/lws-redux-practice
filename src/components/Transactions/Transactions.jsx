@@ -13,17 +13,15 @@ export default function Transactions() {
     let content = null;
     if (isLoading) content = "Loading..."
     if (!isLoading && isError) content = <p style={{ color: 'red' }}>There is error while loading data.</p>
-    if (!isLoading && !isError && transactions.length < 1) content = "No data found"
-    if (!isLoading && !isError && transactions.length > 0) content = transactions.map(item => {
-        return <ul key={item.id}>
-            <Transaction />
-        </ul>
-    })
+    if (!isLoading && !isError && transactions.length < 1) content = <p style={{textAlign: 'center', color: 'orangered'}}>No data found.</p>
+    if (!isLoading && !isError && transactions.length > 0) content = transactions.map(item => <Transaction transaction={item} key={item.id} />)
 
     return (
         <>
             <p className="second_heading">Your Transactions:</p>
-            <div className="conatiner_of_list_of_transactions">{content}</div>
+            <div className="conatiner_of_list_of_transactions">
+                <ul> {content}</ul>
+            </div>
         </>
     );
 }

@@ -23,7 +23,8 @@ export const updateTransaction = createAsyncThunk("tracker/updateTransaction", a
 
 export const deleteTransaction = createAsyncThunk("tracker/removeTransaction", async (id) => {
     const res = await removeTransaction(id);
-    return await res;
+    console.log(res);
+    return await {res, id};
 })
 
 
