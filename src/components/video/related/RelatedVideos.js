@@ -5,12 +5,13 @@ import RelatedVideo from "./RelatedVideo";
 
 export default function RelatedVideos({ id, title }) {
 
-    const { isLoading, isError, data: videos } = useGetRelatedVideosQuery({ id, title })
+    const { isLoading,  isError, data: videos } = useGetRelatedVideosQuery({ id, title })
+  
    
 
     // render on the ui
     let content = null;
-    if (isLoading) content = <>
+    if (isLoading ) content = <>
         <RelatedVideoLoader />
         <RelatedVideoLoader />
         <RelatedVideoLoader />

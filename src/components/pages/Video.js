@@ -11,9 +11,11 @@ import RelatedVideos from "../video/related/RelatedVideos";
 
 export default function Video() {
     const { videoId } = useParams();
-    const getVideo = useGetVideoQuery(videoId)
-    const { isLoading, isError, data: video } = getVideo;
- 
+    const getVideo = useGetVideoQuery(videoId, {
+        refetchOnMountOrArgChange: 5, // true or time in seconds
+    })
+    const { isLoading, isFetching, isError, data: video } = getVideo;
+
 
     let content = null;
     if (isError) content = <Error message="Error Loading data" />
@@ -33,7 +35,7 @@ export default function Video() {
                     </div>
 
                     {
-                        isLoading ? <div><RelatedVideoLoader /><RelatedVideoLoader /><RelatedVideoLoader /></div> :
+                        (isLoading || isFetching) ? <div><RelatedVideoLoader /><RelatedVideoLoader /><RelatedVideoLoader /></div> :
                             video?.id ? <RelatedVideos id={video.id} title={video.title} /> : <Error />
                     }
                 </div>
