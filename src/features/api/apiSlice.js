@@ -4,11 +4,13 @@ export const apiSlice = createApi({
     reducerPath: "videosApi", // optional
     baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:9000" }),
     // keepUnusedDataFor: 5, // for all endpoints
+    tagTypes: ["videos"],
     endpoints: (builder) => ({
         getVideos: builder.query({
             // query: "/videos",
             query: () => "/videos", // used callback function for getting params later on
-            // keepUnusedDataFor: 5, // refetch after 5 sec ,  for specific endpoint
+            // keepUnusedDataFor: 600, // refetch after 5 sec ,  for specific endpoint
+            providesTags: ["videos"]
         }),
         getVideo: builder.query({
             query: (id) => `/videos/${id}`
@@ -26,7 +28,17 @@ export const apiSlice = createApi({
                 url: '/videos',
                 method: "POST",
                 body: data,
-            })
+            }),
+            invalidatesTags: ["videos"]
+        }),
+        // update video
+        updateVideo: builder.mutation({
+            query: (data) => ({
+                url: `/videos/${data.id}`,
+                method: "PATCH",
+                body: data,
+            }),
+            invalidatesTags: ["videos"]
         })
 
     })
@@ -37,5 +49,6 @@ export const {
     useGetVideosQuery,
     useGetVideoQuery,
     useGetRelatedVideosQuery,
-    useAddVideoMutation
+    useAddVideoMutation, 
+    useUpdateVideoMutation
 } = apiSlice;

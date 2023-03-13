@@ -7,7 +7,7 @@ import TextArea from "../ui/TextArea";
 import TextInput from "../ui/TextInput";
 
 export default function Form() {
-    const [addVideo, { isError, isLoading, isSuccess, data }] = useAddVideoMutation();
+    const [addVideo, { isError, isLoading, isSuccess }] = useAddVideoMutation();
 
 
     const [videoData, setVideoData] = useState({
@@ -36,49 +36,65 @@ export default function Form() {
                 <div className="px-4 py-5 bg-white sm:p-6">
                     <div className="grid grid-cols-6 gap-6">
                         <div className="col-span-6 sm:col-span-3">
-                            <TextInput name="title" value={videoData.title}
+                            <TextInput
+                                name="title"
+                                value={videoData.title}
                                 onChange={handleChange}
                                 title="Video Title" />
                         </div>
 
                         <div className="col-span-6 sm:col-span-3">
-                            <TextInput name="author" value={videoData.author}
+                            <TextInput
+                                name="author"
+                                value={videoData.author}
                                 onChange={handleChange}
                                 title="Author" />
                         </div>
 
                         <div className="col-span-6">
-                            <TextArea name="description" value={videoData.description}
+                            <TextArea
+                                name="description"
+                                value={videoData.description}
                                 onChange={handleChange}
                                 title="Description" />
                         </div>
 
                         <div className="col-span-6">
-                            <TextInput name="link" value={videoData.link}
+                            <TextInput
+                                name="link"
+                                value={videoData.link}
                                 onChange={handleChange}
                                 title="YouTube Video link" />
                         </div>
 
                         <div className="col-span-6">
-                            <TextInput name="thumbnail" value={videoData.thumbnail}
+                            <TextInput
+                                name="thumbnail"
+                                value={videoData.thumbnail}
                                 onChange={handleChange}
                                 title="Thumbnail link" />
                         </div>
 
                         <div className="col-span-6 sm:col-span-6 lg:col-span-2">
-                            <TextInput name="date" value={videoData.date}
+                            <TextInput
+                                name="date"
+                                value={videoData.date}
                                 onChange={handleChange}
                                 title="Upload Date" test="test" />
                         </div>
 
                         <div className="col-span-6 sm:col-span-3 lg:col-span-2">
-                            <TextInput name="duration" value={videoData.duration}
+                            <TextInput
+                                name="duration"
+                                value={videoData.duration}
                                 onChange={handleChange}
                                 title="Video Duration" />
                         </div>
 
                         <div className="col-span-6 sm:col-span-3 lg:col-span-2">
-                            <TextInput name="views" value={videoData.views}
+                            <TextInput
+                                name="views"
+                                value={videoData.views}
                                 onChange={handleChange}
                                 title="Video no of views" />
                         </div>
