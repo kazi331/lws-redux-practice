@@ -11,8 +11,9 @@ import RelatedVideos from "../video/related/RelatedVideos";
 
 export default function Video() {
     const { videoId } = useParams();
-    const { isLoading, isError, data: video } = useGetVideoQuery(videoId)
-    // const { isLoading, isError, data: video, error } = useGetRelatedVideosQuery({})
+    const getVideo = useGetVideoQuery(videoId)
+    const { isLoading, isError, data: video } = getVideo;
+ 
 
     let content = null;
     if (isError) content = <Error message="Error Loading data" />
