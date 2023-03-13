@@ -1,12 +1,28 @@
-import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 export const apiSlice = createApi({
-    reducerPath: "lwsApi",
+    reducerPath: "videosApi",
     baseQuery: fetchBaseQuery({
         baseUrl: "http://localhost:9000",
 
     }),
     endpoints: (builder) => ({
-        
+        getVideos: builder.query({
+            // query: "/videos",
+            query: () => "/videos" // used callback function for getting params later on
+        }),
+        getVideo: builder.query({
+            query: (id) => `/videos/${id}`
+        }),
+        getRelatedVideos: builder.query({
+            query: ({ id, title }) => {
+                const likes = title.split(" ").map(tag => `title_like=${tag}`).join("&")
+                const queryString = `/videos?${likes}&_limit=5&id_ne=${id}`
+                return queryString
+            }
+        })
     })
 })
+
+// export api hooks
+export const { useGetVideosQuery, useGetVideoQuery, useGetRelatedVideosQuery } = apiSlice;
