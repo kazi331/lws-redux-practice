@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import authorImage from "../../assets/author.png";
 
 export default function Video({ video }) {
-    const { id, title, date, duration, views, thumbnail, } = video || {}
+    const { id, title, author, date, duration, views, thumbnail, } = video || {}
     return (
         <div className="col-span-12 sm:col-span-6 md:col-span-3 duration-300 hover:scale-[1.03]">
             <div className="w-full flex flex-col">
@@ -34,7 +34,7 @@ export default function Video({ video }) {
                             </p>
                         </Link>
                         <span className="text-gray-400 text-xs hover:text-gray-600">
-                            Learn with Sumit
+                            {author}
                         </span>
                         <p className="text-gray-400 text-xs">
                             {views} views . {date}

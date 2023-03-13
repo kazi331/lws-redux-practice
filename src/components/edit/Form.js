@@ -8,7 +8,6 @@ import TextInput from "../ui/TextInput";
 export default function Form({ video }) {
     const [updateVideo, { isError, isLoading, isSuccess }] = useUpdateVideoMutation();
 
-
     const [videoData, setVideoData] = useState({
         title: video.title,
         description: video.description,
@@ -20,15 +19,14 @@ export default function Form({ video }) {
         thumbnail: video.thumbnail,
     })
 
-    
+
     const handleChange = e => {
         setVideoData(pre => ({ ...pre, [e.target.name]: e.target.value }))
     }
 
     const handleSubmit = e => {
         e.preventDefault();
-        updateVideo({...videoData, id: video.id})
-        // console.log({ ...videoData, id: video.id });
+        updateVideo({ ...videoData, id: video.id })
     }
 
     return (
@@ -103,7 +101,7 @@ export default function Form({ video }) {
                 </div>
                 <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
                     <button
-                    disabled={isLoading}
+                        disabled={isLoading}
                         type="submit"
                         className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-0 focus:ring-offset-0 focus:ring-indigo-500"
                     >

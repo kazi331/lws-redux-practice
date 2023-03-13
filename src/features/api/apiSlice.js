@@ -4,7 +4,7 @@ export const apiSlice = createApi({
     reducerPath: "videosApi", // optional
     baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:9000" }),
     // keepUnusedDataFor: 5, // for all endpoints
-    tagTypes: ["videos"],
+    tagTypes: ["videos", "vidoe", "relatedVideos"],
     endpoints: (builder) => ({
         getVideos: builder.query({
             // query: "/videos",
@@ -13,14 +13,16 @@ export const apiSlice = createApi({
             providesTags: ["videos"]
         }),
         getVideo: builder.query({
-            query: (id) => `/videos/${id}`
+            query: (id) => `/videos/${id}`,
+            providesTags: (result, error, arg) => [{ type: "video", id: arg }]
         }),
         getRelatedVideos: builder.query({
             query: ({ id, title }) => {
                 const likes = title.split(" ").map(tag => `title_like=${tag}`).join("&")
-                const queryString = `/videos?${likes}&_limit=5&id_ne=${id}`
+                const queryString = `/videos?${likes}&_limit=4&id_ne=${id}`
                 return queryString
-            }
+            },
+            providesTags: (result, error, arg) => [{ type: "relatedVideos", id: arg.id }]
         }),
         // post video
         addVideo: builder.mutation({
@@ -38,8 +40,23 @@ export const apiSlice = createApi({
                 method: "PATCH",
                 body: data,
             }),
+            invalidatesTags: (result, error, arg) => {
+                return [
+                    "videos",
+                    { type: "relatedVideos", id: arg.id },
+                    { type: "video", id: arg },
+                ]
+            }
+        }),
+        // delete video 
+        deleteVideo: builder.mutation({
+            query: (id) => ({
+                url: `/videos/${id}`,
+                method: "DELETE",
+            }),
             invalidatesTags: ["videos"]
         })
+
 
     })
 })
@@ -49,6 +66,7 @@ export const {
     useGetVideosQuery,
     useGetVideoQuery,
     useGetRelatedVideosQuery,
-    useAddVideoMutation, 
-    useUpdateVideoMutation
+    useAddVideoMutation,
+    useUpdateVideoMutation, 
+    useDeleteVideoMutation
 } = apiSlice;
