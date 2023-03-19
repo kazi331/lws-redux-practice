@@ -1,8 +1,9 @@
-export default function Error({ message, refetch }) {
+export default function Error({ message }) {
     return (
-        <div className="w-full flex items-center justify-center h-10 max-w-7xl mx-auto p-2 text-red-700 bg-red-100 col-span-12">
-            {message ? message : "There was an error occured!"}
-            {refetch && <button style={{padding: "4px", marginLeft: '4px', color: 'green'}} onClick={() => refetch()}>Refetch</button>}
+        <div className="flex items-center">
+            <div className="relative bg-red-200 max-w-xl px-4 py-2 text-red-800 rounded shadow w-full">
+                <span className="block text-sm">{message}</span>
+            </div>
         </div>
     );
 }
