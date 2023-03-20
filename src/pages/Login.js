@@ -12,7 +12,7 @@ export default function Login() {
         setUser({ ...user, [e.target.name]: e.target.value })
     }
 
-    const [login, { data, isLoading, isError, error: resError }] = useLoginMutation();
+    const [login, { isLoading }] = useLoginMutation();
     const handleLogin = async e => {
         e.preventDefault();
         await login(user).then(data => data.error ? setError(data.error.data) : navigate("/inbox"))
@@ -21,7 +21,7 @@ export default function Login() {
         // console.log({ data, isLoading, isError,  resError });
     }
 
-    console.log('error', error);
+
 
     return (
         <div className="grid place-items-center h-screen bg-[#F9FAFB">

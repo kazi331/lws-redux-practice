@@ -1,5 +1,11 @@
 {
   "users": [
+    {
+      "email": "wipamyve@mailinator.com",
+      "password": "$2a$10$/vD76zyztfdiKExDjQ8E9uE9OzrxVecf2adg.CtHxCX5l/TLClRg.",
+      "name": "Hilary Landry",
+      "id": 1
+    }
   ],
   "conversations": [
     {

@@ -18,7 +18,7 @@ export default function Register() {
         setUser({ ...user, [e.target.name]: e.target.value })
     }
 
-    const [register, { data, isLoading, isError }] = useRegisterMutation();
+    const [register, {  isLoading }] = useRegisterMutation();
 
     const handleSubmit = e => {
         setError(null)
