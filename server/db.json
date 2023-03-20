@@ -5,6 +5,12 @@
       "password": "$2a$10$/vD76zyztfdiKExDjQ8E9uE9OzrxVecf2adg.CtHxCX5l/TLClRg.",
       "name": "Hilary Landry",
       "id": 1
+    },
+    {
+      "email": "kovac@mailinator.com",
+      "password": "$2a$10$..GII0c5a83Mdlrqs21fwenimqC4NkNpmVCx4jYKa6CO5V778OCIG",
+      "name": "Nash Becker",
+      "id": 2
     }
   ],
   "conversations": [
