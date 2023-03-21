@@ -4,7 +4,7 @@ export default function Options() {
             <input
                 type="text"
                 placeholder="Message"
-                className="block w-full py-2 pl-4 mx-3 bg-gray-100 focus:ring focus:ring-violet-500 rounded-full outline-none focus:text-gray-700"
+                className="block w-full py-2 pl-4 mx-3 bg-gray-100 focus:ring-0 rounded-full focus:text-gray-700"
                 name="message"
                 required
             />
