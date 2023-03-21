@@ -6,10 +6,13 @@ export default function Messages({ messages }) {
     return (
         <div className="relative w-full h-[calc(100vh_-_197px)] p-6 overflow-y-auto flex flex-col-reverse">
             <ul className="space-y-2">
-                {messages.map(message => {
-                    const { message: msg, id, sender } = message || {};
+                {messages
+                .slice()
+                    .sort((a, b) => a.timestamp - b.timestamp)
+                .map(message => {
+                    const { message: lastMsg, id, sender } = message || {};
                     const justify = sender.email === email ? "end" : "start"
-                    return <Message key={id} justify={justify} message={msg} />
+                    return <Message key={id} justify={justify} message={lastMsg} />
                 })
                 }
 
