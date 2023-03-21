@@ -1,16 +1,34 @@
 {
   "users": [
     {
-      "email": "wipamyve@mailinator.com",
+      "email": "sumit@learnwithsumit.com-akash",
       "password": "$2a$10$/vD76zyztfdiKExDjQ8E9uE9OzrxVecf2adg.CtHxCX5l/TLClRg.",
       "name": "Hilary Landry",
       "id": 1
     },
     {
-      "email": "kovac@mailinator.com",
+      "email": "sumit@learnwithsumit.com",
       "password": "$2a$10$..GII0c5a83Mdlrqs21fwenimqC4NkNpmVCx4jYKa6CO5V778OCIG",
       "name": "Nash Becker",
       "id": 2
+    },
+    {
+      "email": "kemilyfo@mailinator.com",
+      "password": "$2a$10$M1rkZ.VJhql.tj5EgBPN7OPBg61PuHp1HGbfmScp1DRy6uqpTQ26.",
+      "name": "Abel Parrish",
+      "id": 3
+    },
+    {
+      "email": "zomuxew@mailinator.com",
+      "password": "$2a$10$gDfRUjAo5DE2D5.8LfnbJezGj9fUc8OAmyRErisWjz1ZzxixvZk9K",
+      "name": "Demetrius Walton",
+      "id": 4
+    },
+    {
+      "email": "biginuc@mailinator.com",
+      "password": "$2a$10$IWn/.iRQV06t9dMKa3TqoOHQNQfTScq28gl6/PuEA0ZoZUUnnOqYy",
+      "name": "Wallace Bauer",
+      "id": 5
     }
   ],
   "conversations": [
@@ -42,8 +60,8 @@
           "id": 1
         },
         {
-          "email": "akash@learnwithsumit.com",
-          "name": "Saad Hasan",
+          "email": "jowel5693@gmail.com",
+          "name": "Jowel Ahmed",
           "id": 3
         }
       ],
