@@ -1,31 +1,31 @@
 {
   "users": [
     {
-      "email": "sumit@learnwithsumit.com-akash",
+      "email": "saad@lws.com",
       "password": "$2a$10$/vD76zyztfdiKExDjQ8E9uE9OzrxVecf2adg.CtHxCX5l/TLClRg.",
       "name": "Hilary Landry",
       "id": 1
     },
     {
-      "email": "sumit@learnwithsumit.com",
+      "email": "sumit@lws.com",
       "password": "$2a$10$..GII0c5a83Mdlrqs21fwenimqC4NkNpmVCx4jYKa6CO5V778OCIG",
       "name": "Nash Becker",
       "id": 2
     },
     {
-      "email": "kemilyfo@mailinator.com",
+      "email": "jowel5693@gmail.com",
       "password": "$2a$10$M1rkZ.VJhql.tj5EgBPN7OPBg61PuHp1HGbfmScp1DRy6uqpTQ26.",
       "name": "Abel Parrish",
       "id": 3
     },
     {
-      "email": "zomuxew@mailinator.com",
+      "email": "test2@test.com",
       "password": "$2a$10$gDfRUjAo5DE2D5.8LfnbJezGj9fUc8OAmyRErisWjz1ZzxixvZk9K",
       "name": "Demetrius Walton",
       "id": 4
     },
     {
-      "email": "biginuc@mailinator.com",
+      "email": "test@test.com",
       "password": "$2a$10$IWn/.iRQV06t9dMKa3TqoOHQNQfTScq28gl6/PuEA0ZoZUUnnOqYy",
       "name": "Wallace Bauer",
       "id": 5
@@ -34,15 +34,15 @@
   "conversations": [
     {
       "id": 1,
-      "participants": "sumit@learnwithsumit.com-akash@learnwithsumit.com",
+      "participants": "sumit@lws.com-akash@lws.com",
       "users": [
         {
-          "email": "sumit@learnwithsumit.com",
+          "email": "sumit@lws.com",
           "name": "Sumit Saha",
           "id": 1
         },
         {
-          "email": "akash@learnwithsumit.com",
+          "email": "akash@lws.com",
           "name": "Akash Ahmed",
           "id": 2
         }
@@ -52,10 +52,10 @@
     },
     {
       "id": 2,
-      "participants": "sumit@learnwithsumit.com-saad@learnwithsumit.com",
+      "participants": "sumit@lws.com-saad@lws.com",
       "users": [
         {
-          "email": "sumit@learnwithsumit.com",
+          "email": "sumit@lws.com",
           "name": "Sumit Saha",
           "id": 1
         },
@@ -74,12 +74,12 @@
       "id": 1,
       "conversationId": 1,
       "sender": {
-        "email": "sumit@learnwithsumit.com",
+        "email": "sumit@lws.com",
         "name": "Sumit Saha",
         "id": 1
       },
       "receiver": {
-        "email": "akash@learnwithsumit.com",
+        "email": "akash@lws.com",
         "name": "Akash Ahmed",
         "id": 2
       },
@@ -90,12 +90,12 @@
       "id": 2,
       "conversationId": 1,
       "sender": {
-        "email": "akash@learnwithsumit.com",
+        "email": "akash@lws.com",
         "name": "Akash Ahmed",
         "id": 2
       },
       "receiver": {
-        "email": "sumit@learnwithsumit.com",
+        "email": "sumit@lws.com",
         "name": "Sumit Saha",
         "id": 1
       },
@@ -106,12 +106,12 @@
       "id": 3,
       "conversationId": 1,
       "sender": {
-        "email": "sumit@learnwithsumit.com",
+        "email": "sumit@lws.com",
         "name": "Akash Ahmed",
         "id": 2
       },
       "receiver": {
-        "email": "akash@learnwithsumit.com",
+        "email": "akash@lws.com",
         "name": "Sumit Saha",
         "id": 1
       },
@@ -122,12 +122,12 @@
       "id": 4,
       "conversationId": 1,
       "sender": {
-        "email": "sumit@learnwithsumit.com",
+        "email": "sumit@lws.com",
         "name": "Akash Ahmed",
         "id": 2
       },
       "receiver": {
-        "email": "akash@learnwithsumit.com",
+        "email": "akash@lws.com",
         "name": "Sumit Saha",
         "id": 1
       },
@@ -138,12 +138,12 @@
       "id": 5,
       "conversationId": 1,
       "sender": {
-        "email": "akash@learnwithsumit.com",
+        "email": "akash@lws.com",
         "name": "Akash Ahmed",
         "id": 2
       },
       "receiver": {
-        "email": "sumit@learnwithsumit.com",
+        "email": "sumit@lws.com",
         "name": "Sumit Saha",
         "id": 1
       },
@@ -159,7 +159,7 @@
         "id": 2
       },
       "receiver": {
-        "email": "sumit@learnwithsumit.com",
+        "email": "sumit@lws.com",
         "name": "Sumit Saha",
         "id": 1
       },
@@ -170,7 +170,7 @@
       "id": 2,
       "conversationId": 2,
       "sender": {
-        "email": "sumit@learnwithsumit.com",
+        "email": "sumit@lws.com",
         "name": "Akash Ahmed",
         "id": 2
       },
