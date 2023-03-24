@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { conversationsApi, useAddConversationMutation, useEditConversationMutation } from "../../features/conversations/conversationsApi";
 import { useGetUsersQuery } from "../../features/users/usersApi";
 import isValidEmail from "../../utils/isValidEmail";
 import Error from "../ui/Error";
@@ -8,19 +9,35 @@ export default function Modal({ open, control }) {
     const [sendTo, setSendTo] = useState("");
     const [message, setMessage] = useState("")
     const [checkUser, setCheckUser] = useState(false)
-    const { email: myEmail } = useSelector(state => state.auth.user) || {}
+    const { user: loggedInUser } = useSelector(state => state.auth) || {}
+    const { email: myEmail } = loggedInUser || {}
+    const dispatch = useDispatch();
+    const [conversation, setConversation] = useState(undefined)
 
     const { data: participant } = useGetUsersQuery(sendTo, {
         skip: !checkUser
     })
-    console.log(participant?.length);
+
+
+    const [addConversation, { isSuccess: addSuccess }] = useAddConversationMutation();
+    const [editConversation, { isSuccess: editSuccess }] = useEditConversationMutation();
+
+    //  hide modal 
+    useEffect(() => {
+        control();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [addSuccess, editSuccess])
 
     useEffect(() => {
         if (participant?.length > 0 && participant[0].email !== myEmail) {
-           // check conversation existance
+            // check conversation existance
+            dispatch(conversationsApi.endpoints.getConversation.initiate({ userEmail: myEmail, partnerEmail: sendTo }))
+                .unwrap()
+                .then(data => setConversation(data))
+                .catch(err => console.log(err))
         }
 
-    }, [participant, myEmail])
+    }, [participant, myEmail, dispatch, sendTo])
 
     // debounce handler function
     const debounceHandler = (fn, delay) => {
@@ -48,6 +65,34 @@ export default function Modal({ open, control }) {
     }
 
     const handleSearch = debounceHandler(search, 500);
+    const handleSubmit = e => {
+        e.preventDefault();
+        // add or edit conversation
+        if (conversation.length > 0) {
+            // edit conversation
+            editConversation({
+                id: conversation[0].id,
+                data: {
+                    participants: `${myEmail}-${sendTo}`,
+                    users: [
+                        participant[0], loggedInUser
+                    ],
+                    message,
+                    timestamp: new Date().getTime()
+                }
+            })
+        } else if (conversation.length === 0) {
+            // add conversation 
+            addConversation({
+                participants: `${myEmail}-${sendTo}`,
+                users: [
+                    participant[0], loggedInUser
+                ],
+                message,
+                timestamp: new Date().getTime()
+            })
+        }
+    }
 
     return (
         open && (
@@ -60,7 +105,7 @@ export default function Modal({ open, control }) {
                     <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
                         Send message
                     </h2>
-                    <form className="mt-8 space-y-6" action="#" method="POST">
+                    <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
                         <input type="hidden" name="remember" value="true" />
                         <div className="rounded-md shadow-sm -space-y-px">
                             <div>
@@ -99,13 +144,14 @@ export default function Modal({ open, control }) {
                             <button
                                 type="submit"
                                 className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-violet-600 hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-500"
+                                disabled={conversation === undefined || (participant?.length > 0 && participant[0].email === myEmail)}
                             >
                                 Send Message
                             </button>
                         </div>
 
                         {participant?.length < 1 && <Error message="User doesn't exists" />}
-                        {participant?.length > 0 && participant[0].email === myEmail &&  <Error message="You cannot message yourself" />}
+                        {participant?.length > 0 && participant[0].email === myEmail && <Error message="You cannot message yourself" />}
                     </form>
                 </div>
             </>

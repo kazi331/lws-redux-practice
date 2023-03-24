@@ -9,7 +9,7 @@ import Options from "./Options";
 export default function ChatBody() {
     const { id } = useParams();
     const { data: messages, isLoading, isError, error } = useGetMessagesQuery(id)
-    
+
 
     let content = null;
     if (isLoading) {
@@ -18,11 +18,8 @@ export default function ChatBody() {
         content = <div><Error message={error?.data} /> </div>
     } else if (!isLoading && messages.length < 1) {
         content = <>
-            <ChatHead
-                avatar="https://cdn.pixabay.com/photo/2018/01/15/07/51/woman-3083383__340.jpg"
-                name="Akash Ahmed"
-            />
-            <div><div className=" p-4" >Start Chatting!!</div></div>
+            {/* <ChatHead message={messages[0]} /> */}
+            <div className=" p-4" >Start Chatting!!</div>
             <Options />
         </>
     } else if (!isLoading && !isError && messages.length > 0) {
