@@ -2,112 +2,18 @@
   "users": [
     {
       "email": "saad@lws.com",
-      "password": "$2a$10$/vD76zyztfdiKExDjQ8E9uE9OzrxVecf2adg.CtHxCX5l/TLClRg.",
+      "password": "$2a$10$DFCMiZrq9qo0/QXqwYtMdOHi0str4s9dzXLyo/Pja2u.dOhbrUtLa",
       "name": "Saad Hasan",
       "id": 1
     },
     {
-      "email": "sumit@lws.com",
-      "password": "$2a$10$..GII0c5a83Mdlrqs21fwenimqC4NkNpmVCx4jYKa6CO5V778OCIG",
-      "name": "Sumit Saha",
-      "id": 2
-    },
-    {
-      "email": "jowel5693@gmail.com",
-      "password": "$2a$10$M1rkZ.VJhql.tj5EgBPN7OPBg61PuHp1HGbfmScp1DRy6uqpTQ26.",
-      "name": "Jowel Ahmed",
-      "id": 3
-    },
-    {
-      "email": "test2@test.com",
-      "password": "$2a$10$gDfRUjAo5DE2D5.8LfnbJezGj9fUc8OAmyRErisWjz1ZzxixvZk9K",
-      "name": "Test User",
-      "id": 4
-    },
-    {
       "email": "akash@lws.com",
-      "password": "$2a$10$IWn/.iRQV06t9dMKa3TqoOHQNQfTScq28gl6/PuEA0ZoZUUnnOqYy",
+      "password": "$2a$10$Vw9ggL5TKVjW869t2AZmXes67E22pnoTY5rhQ9/8bnWsL3TNw/7Py",
       "name": "Akash Ahmed",
-      "id": 5
+      "id": 2
     }
   ],
-  "conversations": [
-    {
-      "id": 1,
-      "participants": "sumit@lws.com-akash@lws.com",
-      "users": [
-        {
-          "email": "akash@lws.com",
-          "password": "$2a$10$IWn/.iRQV06t9dMKa3TqoOHQNQfTScq28gl6/PuEA0ZoZUUnnOqYy",
-          "name": "Akash Ahmed",
-          "id": 5
-        },
-        {
-          "email": "sumit@lws.com",
-          "name": "Nash Becker",
-          "id": 2
-        }
-      ],
-      "message": "hello akash, what is your next target?",
-      "timestamp": 1679637452635
-    },
-    {
-      "id": 2,
-      "participants": "sumit@lws.com-jowel5693@gmail.com",
-      "users": [
-        {
-          "email": "sumit@lws.com",
-          "name": "Sumit Saha",
-          "id": 1
-        },
-        {
-          "email": "jowel5693@gmail.com",
-          "name": "Jowel Ahmed",
-          "id": 3
-        }
-      ],
-      "message": "How are you?",
-      "timestamp": 1661976143678
-    },
-    {
-      "participants": "sumit@lws.com-saad@lws.com",
-      "users": [
-        {
-          "email": "saad@lws.com",
-          "password": "$2a$10$/vD76zyztfdiKExDjQ8E9uE9OzrxVecf2adg.CtHxCX5l/TLClRg.",
-          "name": "Saad Hasan",
-          "id": 1
-        },
-        {
-          "email": "sumit@lws.com",
-          "name": "Nash Becker",
-          "id": 2
-        }
-      ],
-      "message": "hello saad, how are you?",
-      "timestamp": 1679637810515,
-      "id": 3
-    },
-    {
-      "participants": "sumit@lws.com-test2@test.com",
-      "users": [
-        {
-          "email": "test2@test.com",
-          "password": "$2a$10$gDfRUjAo5DE2D5.8LfnbJezGj9fUc8OAmyRErisWjz1ZzxixvZk9K",
-          "name": "Test User",
-          "id": 4
-        },
-        {
-          "email": "sumit@lws.com",
-          "name": "Sumit Saha",
-          "id": 2
-        }
-      ],
-      "message": "hello, how are you mr. test?",
-      "timestamp": 1679638453366,
-      "id": 4
-    }
-  ],
+  "conversations": [],
   "messages": [
     {
       "id": 1,
@@ -124,102 +30,6 @@
       },
       "message": "Hello",
       "timestamp": 1661976143557
-    },
-    {
-      "id": 2,
-      "conversationId": 1,
-      "sender": {
-        "email": "akash@lws.com",
-        "name": "Akash Ahmed",
-        "id": 2
-      },
-      "receiver": {
-        "email": "sumit@lws.com",
-        "name": "Sumit Saha",
-        "id": 1
-      },
-      "message": "How are you?",
-      "timestamp": 1661976143578
-    },
-    {
-      "id": 3,
-      "conversationId": 1,
-      "sender": {
-        "email": "sumit@lws.com",
-        "name": "Akash Ahmed",
-        "id": 2
-      },
-      "receiver": {
-        "email": "akash@lws.com",
-        "name": "Sumit Saha",
-        "id": 1
-      },
-      "message": "I'm fine",
-      "timestamp": 1661976143679
-    },
-    {
-      "id": 4,
-      "conversationId": 1,
-      "sender": {
-        "email": "sumit@lws.com",
-        "name": "Akash Ahmed",
-        "id": 2
-      },
-      "receiver": {
-        "email": "akash@lws.com",
-        "name": "Sumit Saha",
-        "id": 1
-      },
-      "message": "How are you doing bro",
-      "timestamp": 1661976143680
-    },
-    {
-      "id": 5,
-      "conversationId": 1,
-      "sender": {
-        "email": "akash@lws.com",
-        "name": "Akash Ahmed",
-        "id": 2
-      },
-      "receiver": {
-        "email": "sumit@lws.com",
-        "name": "Sumit Saha",
-        "id": 1
-      },
-      "message": "I'm all right dear",
-      "timestamp": 1661976143681
-    },
-    {
-      "id": 1,
-      "conversationId": 2,
-      "sender": {
-        "email": "jowel5693@gmail.com",
-        "name": "Jowel Ahmed",
-        "id": 2
-      },
-      "receiver": {
-        "email": "sumit@lws.com",
-        "name": "Sumit Saha",
-        "id": 1
-      },
-      "message": "Hi,",
-      "timestamp": 1661976143681
-    },
-    {
-      "id": 2,
-      "conversationId": 2,
-      "sender": {
-        "email": "sumit@lws.com",
-        "name": "Sumit Saha",
-        "id": 2
-      },
-      "receiver": {
-        "email": "jowel5693@gmail.com",
-        "name": "Jowel Ahmed",
-        "id": 1
-      },
-      "message": "Hello",
-      "timestamp": 1661976143682
     }
   ]
 }

@@ -13,7 +13,10 @@ export const conversationsApi = apiSlice.injectEndpoints({
                 url: "/conversations",
                 method: 'POST',
                 body: data
-            })
+            }),
+            async onQueryStarted() {
+
+            }
         }),
         editConversation: builder.mutation({
             query: ({ id, data }) => ({

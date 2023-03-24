@@ -1,9 +1,10 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import logoImage from "../../assets/images/lws-logo-dark.svg";
 import { userLoggedOut } from "../../features/auth/authSlice";
 
 export default function Navigation() {
+    const {name} = useSelector(state => state.auth.user) || {}
     const dispatch = useDispatch();
     const logout = () => {
         dispatch(userLoggedOut())
@@ -21,8 +22,9 @@ export default function Navigation() {
                         />
                     </Link>
                     <ul>
-                        <li className="text-white">
-                            <span onClick={logout} className="cursor-pointer">Logout</span>
+                        <li className="text-white flex">
+                            <button onClick={logout} className="cursor-pointer  px-2 border rounded">Logout</button>
+                            <p className="ml-2">{name}</p>
                         </li>
                     </ul>
                 </div>
