@@ -1,3 +1,4 @@
+import { IncomingIcon, OutgoingIcon } from "../ui/Icons";
 
 export default function ChatItem({ avatar, name, lastMessage, lastTime }) {
     return (
@@ -19,9 +20,13 @@ export default function ChatItem({ avatar, name, lastMessage, lastTime }) {
                         {lastTime}
                     </span>
                 </div>
-                <span className="block ml-2 text-sm text-gray-600">
-                    {lastMessage}
-                </span>
+                <div className="flex justify-between items-center">
+                    <span className="block ml-2 text-sm text-gray-600">
+                        {lastMessage}
+                    </span>
+                    {/* <IncomingIcon />
+                    <OutgoingIcon /> */}
+                </div>
             </div>
         </div>
     );

@@ -72,10 +72,12 @@ export default function Modal({ open, control }) {
             // edit conversation
             editConversation({
                 id: conversation[0].id,
+                sender: myEmail,
                 data: {
                     participants: `${myEmail}-${sendTo}`,
                     users: [
-                        participant[0], loggedInUser
+                        { email: participant[0].email, name: participant[0].name },
+                        { email: loggedInUser.email, name: loggedInUser.name }
                     ],
                     message,
                     timestamp: new Date().getTime()
@@ -84,12 +86,15 @@ export default function Modal({ open, control }) {
         } else if (conversation.length === 0) {
             // add conversation 
             addConversation({
-                participants: `${myEmail}-${sendTo}`,
-                users: [
-                    participant[0], loggedInUser
-                ],
-                message,
-                timestamp: new Date().getTime()
+                sender: myEmail, data: {
+                    participants: `${myEmail}-${sendTo}`,
+                    users: [
+                        { email: participant[0].email, name: participant[0].name },
+                        { email: loggedInUser.email, name: loggedInUser.name }
+                    ],
+                    message,
+                    timestamp: new Date().getTime()
+                }
             })
         }
     }

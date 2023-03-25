@@ -20,6 +20,7 @@ export default function ChatItems() {
     if (!isLoading && !isError && conversations.length > 0) content = conversations.map(conversation => {
         const { id, message, timestamp, users } = conversation || {};
         const { name, email } = getPartnerInfo(users, user.email);
+        
         return <li key={conversation.id}>
             <Link to={`/inbox/${id}`}>
                 <ChatItem

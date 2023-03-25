@@ -2,34 +2,71 @@
   "users": [
     {
       "email": "saad@lws.com",
-      "password": "$2a$10$DFCMiZrq9qo0/QXqwYtMdOHi0str4s9dzXLyo/Pja2u.dOhbrUtLa",
+      "password": "$2a$10$afVwjBoVeFJrqFJeYWHbDOeHK524D5bBVkhABIa4RHPnSlAQthNXm",
       "name": "Saad Hasan",
       "id": 1
     },
     {
       "email": "akash@lws.com",
-      "password": "$2a$10$Vw9ggL5TKVjW869t2AZmXes67E22pnoTY5rhQ9/8bnWsL3TNw/7Py",
+      "password": "$2a$10$zYAb/2gutcN.5iwM0iSWl.uC/leQlyXxLrmLSXvvz9aXlRcmEwMUe",
       "name": "Akash Ahmed",
+      "id": 2
+    },
+    {
+      "email": "sayem@khan.com",
+      "password": "$2a$10$rYYFCzVZx474KgsRHuJsq.G3iDbm4XSeTxXKXq4bVv5QwoaiDAL1.",
+      "name": "sayem khan",
+      "id": 3
+    }
+  ],
+  "conversations": [
+    {
+      "participants": "saad@lws.com-akash@lws.com",
+      "users": [
+        {
+          "email": "akash@lws.com",
+          "name": "Akash Ahmed"
+        },
+        {
+          "email": "saad@lws.com",
+          "name": "Saad Hasan"
+        }
+      ],
+      "message": "fsdsdfs",
+      "timestamp": 1679726729712,
+      "id": 1
+    },
+    {
+      "participants": "saad@lws.com-sayem@khan.com",
+      "users": [
+        {
+          "email": "sayem@khan.com",
+          "name": "sayem khan"
+        },
+        {
+          "email": "saad@lws.com",
+          "name": "Saad Hasan"
+        }
+      ],
+      "message": "Hello sayem\n",
+      "timestamp": 1679726752499,
       "id": 2
     }
   ],
-  "conversations": [],
   "messages": [
     {
-      "id": 1,
       "conversationId": 1,
       "sender": {
-        "email": "sumit@lws.com",
-        "name": "Sumit Saha",
-        "id": 1
+        "email": "saad@lws.com",
+        "name": "Saad Hasan"
       },
       "receiver": {
         "email": "akash@lws.com",
-        "name": "Akash Ahmed",
-        "id": 2
+        "name": "Akash Ahmed"
       },
-      "message": "Hello",
-      "timestamp": 1661976143557
+      "message": "fsdsdfs",
+      "timestamp": 1679726729712,
+      "id": 1
     }
   ]
 }
