@@ -17,23 +17,35 @@
       "password": "$2a$10$rYYFCzVZx474KgsRHuJsq.G3iDbm4XSeTxXKXq4bVv5QwoaiDAL1.",
       "name": "sayem khan",
       "id": 3
+    },
+    {
+      "email": "test@test.com",
+      "password": "$2a$10$6dOvlHoMBkqHyakYM0ULDe1uXV.dK/ZpzRH2gT5ppqCpktZ9hlRI.",
+      "name": "Test User",
+      "id": 4
+    },
+    {
+      "email": "test2@test.com",
+      "password": "$2a$10$UKD.0n5Opwvb8eVBvaArtewoRqmytc1J49j27SHjJsHslNVR7N/Wy",
+      "name": "Dawn Chen",
+      "id": 5
     }
   ],
   "conversations": [
     {
-      "participants": "saad@lws.com-akash@lws.com",
+      "participants": "akash@lws.com-saad@lws.com",
       "users": [
-        {
-          "email": "akash@lws.com",
-          "name": "Akash Ahmed"
-        },
         {
           "email": "saad@lws.com",
           "name": "Saad Hasan"
+        },
+        {
+          "email": "akash@lws.com",
+          "name": "Akash Ahmed"
         }
       ],
-      "message": "fsdsdfs",
-      "timestamp": 1679726729712,
+      "message": "Hi, Saad",
+      "timestamp": 1679728835659,
       "id": 1
     },
     {
@@ -48,9 +60,25 @@
           "name": "Saad Hasan"
         }
       ],
-      "message": "Hello sayem\n",
-      "timestamp": 1679726752499,
+      "message": "How are you?",
+      "timestamp": 1679728787559,
       "id": 2
+    },
+    {
+      "participants": "test2@test.com-saad@lws.com",
+      "users": [
+        {
+          "email": "saad@lws.com",
+          "name": "Saad Hasan"
+        },
+        {
+          "email": "test2@test.com",
+          "name": "Dawn Chen"
+        }
+      ],
+      "message": "hi, saad",
+      "timestamp": 1679728914874,
+      "id": 3
     }
   ],
   "messages": [
@@ -67,6 +95,76 @@
       "message": "Hi, Akash!,",
       "timestamp": 1679726729712,
       "id": 1
+    },
+    {
+      "conversationId": 2,
+      "sender": {
+        "email": "saad@lws.com",
+        "name": "Saad Hasan"
+      },
+      "receiver": {
+        "email": "sayem@khan.com",
+        "name": "sayem khan"
+      },
+      "message": "hello sayem",
+      "timestamp": 1679728771354,
+      "id": 2
+    },
+    {
+      "conversationId": 2,
+      "sender": {
+        "email": "saad@lws.com",
+        "name": "Saad Hasan"
+      },
+      "receiver": {
+        "email": "sayem@khan.com",
+        "name": "sayem khan"
+      },
+      "message": "How are you?",
+      "timestamp": 1679728787559,
+      "id": 3
+    },
+    {
+      "conversationId": 1,
+      "sender": {
+        "email": "saad@lws.com",
+        "name": "Saad Hasan"
+      },
+      "receiver": {
+        "email": "akash@lws.com",
+        "name": "Akash Ahmed"
+      },
+      "message": "Hello Akash,",
+      "timestamp": 1679728802575,
+      "id": 4
+    },
+    {
+      "conversationId": 1,
+      "sender": {
+        "email": "akash@lws.com",
+        "name": "Akash Ahmed"
+      },
+      "receiver": {
+        "email": "saad@lws.com",
+        "name": "Saad Hasan"
+      },
+      "message": "Hi, Saad",
+      "timestamp": 1679728835659,
+      "id": 5
+    },
+    {
+      "conversationId": 3,
+      "sender": {
+        "email": "test2@test.com",
+        "name": "Dawn Chen"
+      },
+      "receiver": {
+        "email": "saad@lws.com",
+        "name": "Saad Hasan"
+      },
+      "message": "hi, saad",
+      "timestamp": 1679728914874,
+      "id": 6
     }
   ]
 }
