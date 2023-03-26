@@ -2,33 +2,63 @@
   "users": [
     {
       "email": "saad@lws.com",
-      "password": "$2a$10$afVwjBoVeFJrqFJeYWHbDOeHK524D5bBVkhABIa4RHPnSlAQthNXm",
+      "password": "$2a$10$oG6xQGTWhKRwpIp2jKeINOaEMq8bxzCXMpbovAelmq8V36WY/Ozba",
       "name": "Saad Hasan",
       "id": 1
     },
     {
       "email": "akash@lws.com",
-      "password": "$2a$10$zYAb/2gutcN.5iwM0iSWl.uC/leQlyXxLrmLSXvvz9aXlRcmEwMUe",
+      "password": "$2a$10$tUsdCUVUr.CYSC9ie1s3CO7YQgbQclTUkOGO8liRTMFVV/lyyewLi",
       "name": "Akash Ahmed",
       "id": 2
     },
     {
-      "email": "sayem@khan.com",
-      "password": "$2a$10$rYYFCzVZx474KgsRHuJsq.G3iDbm4XSeTxXKXq4bVv5QwoaiDAL1.",
-      "name": "sayem khan",
+      "email": "hucysyqa@mailinator.com",
+      "password": "$2a$10$JGUlidQL/VJY9IfaezwhX.o/O20OXbVNysOvwXlAhQSXwZDSlwgcO",
+      "name": "Quinn Rodgers",
       "id": 3
     },
     {
-      "email": "test@test.com",
-      "password": "$2a$10$6dOvlHoMBkqHyakYM0ULDe1uXV.dK/ZpzRH2gT5ppqCpktZ9hlRI.",
-      "name": "Test User",
+      "email": "tefa@mailinator.com",
+      "password": "$2a$10$ATfv/gySha4BCFZtHYK6ROI1BY5bs2gDI9K0nIajGvYkLkkZKo/Ha",
+      "name": "Clementine Glenn",
       "id": 4
     },
     {
-      "email": "test2@test.com",
-      "password": "$2a$10$UKD.0n5Opwvb8eVBvaArtewoRqmytc1J49j27SHjJsHslNVR7N/Wy",
-      "name": "Dawn Chen",
+      "email": "sywurabeh@mailinator.com",
+      "password": "$2a$10$OtX.UXLHw467xNFnpyFvkOTPp6oTwxac5lj89P5fUFaAMPrcQ8Obi",
+      "name": "Serina Tyson",
       "id": 5
+    },
+    {
+      "email": "gulyxirife@mailinator.com",
+      "password": "$2a$10$KLU1l1QqlRHFpuvTyETdIO153gL9SqOtVM46PnTLTbGBgD/OrUiYy",
+      "name": "Clarke Potter",
+      "id": 6
+    },
+    {
+      "email": "nicax@mailinator.com",
+      "password": "$2a$10$2SLceaLpop5TDpY9SJvrseWEo/pbb1QeqlMJuywheRocDDyLl/qIy",
+      "name": "Savannah Chavez",
+      "id": 7
+    },
+    {
+      "email": "fypupesi@mailinator.com",
+      "password": "$2a$10$QVB7CWTgwHJ53DPplcCp1OGbJCJ8CGafVRGbDoKbVIoCBZg7Domse",
+      "name": "Julie Porter",
+      "id": 8
+    },
+    {
+      "email": "benakedo@mailinator.com",
+      "password": "$2a$10$7KGJdr7mGSXvw7mHnBA.ZOlXGvi/cdj0xbNBksamoeAp8dgQ6Kpq2",
+      "name": "Emerson Francis",
+      "id": 9
+    },
+    {
+      "email": "cawuzi@mailinator.com",
+      "password": "$2a$10$amm0DdQKrbAiRcSrrnI6UOBD4YJGN6x2nTG7I45nzmKG0ScfX5hSK",
+      "name": "Ignacia Park",
+      "id": 10
     }
   ],
   "conversations": [
@@ -44,41 +74,9 @@
           "name": "Akash Ahmed"
         }
       ],
-      "message": "Hi, Saad",
-      "timestamp": 1679728835659,
+      "message": "Nostrud veniam non ",
+      "timestamp": 1679828954120,
       "id": 1
-    },
-    {
-      "participants": "saad@lws.com-sayem@khan.com",
-      "users": [
-        {
-          "email": "sayem@khan.com",
-          "name": "sayem khan"
-        },
-        {
-          "email": "saad@lws.com",
-          "name": "Saad Hasan"
-        }
-      ],
-      "message": "How are you?",
-      "timestamp": 1679728787559,
-      "id": 2
-    },
-    {
-      "participants": "test2@test.com-saad@lws.com",
-      "users": [
-        {
-          "email": "saad@lws.com",
-          "name": "Saad Hasan"
-        },
-        {
-          "email": "test2@test.com",
-          "name": "Dawn Chen"
-        }
-      ],
-      "message": "hi, saad",
-      "timestamp": 1679728914874,
-      "id": 3
     }
   ],
   "messages": [
@@ -92,79 +90,9 @@
         "email": "akash@lws.com",
         "name": "Akash Ahmed"
       },
-      "message": "Hi, Akash!,",
-      "timestamp": 1679726729712,
+      "message": "hello akash",
+      "timestamp": 1679825521233,
       "id": 1
-    },
-    {
-      "conversationId": 2,
-      "sender": {
-        "email": "saad@lws.com",
-        "name": "Saad Hasan"
-      },
-      "receiver": {
-        "email": "sayem@khan.com",
-        "name": "sayem khan"
-      },
-      "message": "hello sayem",
-      "timestamp": 1679728771354,
-      "id": 2
-    },
-    {
-      "conversationId": 2,
-      "sender": {
-        "email": "saad@lws.com",
-        "name": "Saad Hasan"
-      },
-      "receiver": {
-        "email": "sayem@khan.com",
-        "name": "sayem khan"
-      },
-      "message": "How are you?",
-      "timestamp": 1679728787559,
-      "id": 3
-    },
-    {
-      "conversationId": 1,
-      "sender": {
-        "email": "saad@lws.com",
-        "name": "Saad Hasan"
-      },
-      "receiver": {
-        "email": "akash@lws.com",
-        "name": "Akash Ahmed"
-      },
-      "message": "Hello Akash,",
-      "timestamp": 1679728802575,
-      "id": 4
-    },
-    {
-      "conversationId": 1,
-      "sender": {
-        "email": "akash@lws.com",
-        "name": "Akash Ahmed"
-      },
-      "receiver": {
-        "email": "saad@lws.com",
-        "name": "Saad Hasan"
-      },
-      "message": "Hi, Saad",
-      "timestamp": 1679728835659,
-      "id": 5
-    },
-    {
-      "conversationId": 3,
-      "sender": {
-        "email": "test2@test.com",
-        "name": "Dawn Chen"
-      },
-      "receiver": {
-        "email": "saad@lws.com",
-        "name": "Saad Hasan"
-      },
-      "message": "hi, saad",
-      "timestamp": 1679728914874,
-      "id": 6
     }
   ]
 }
