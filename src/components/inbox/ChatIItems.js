@@ -11,8 +11,7 @@ export default function ChatItems() {
     const { email } = useSelector(state => state.auth.user);
 
     const { data: conversations, isLoading, isError, error, } = useGetConversationsQuery(email);
-
-
+    
     let content = null;
     if (isLoading) content = <li className="text-center py-2">Loading...</li>;
     if (isError) content = <li className="text-center p-2"><Error message={error?.error?.split(":")[1] || error?.data} /></li>;

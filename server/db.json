@@ -15,21 +15,64 @@
   ],
   "conversations": [
     {
-      "participants": "akash@lws.com-saad@lws.com",
+      "participants": "saad@lws.com-akash@lws.com",
       "users": [
-        {
-          "email": "saad@lws.com",
-          "name": "Saad Hasan"
-        },
         {
           "email": "akash@lws.com",
           "name": "Akash Ahmed"
+        },
+        {
+          "email": "saad@lws.com",
+          "name": "Saad Hasan"
         }
       ],
-      "message": "I'm fine bro",
-      "timestamp": 1679916307701,
+      "message": "I'm waiting for you",
+      "timestamp": 1679918202340,
       "id": 1
     }
   ],
-  "messages": []
+  "messages": [
+    {
+      "conversationId": 1,
+      "sender": {
+        "email": "saad@lws.com",
+        "name": "Saad Hasan"
+      },
+      "receiver": {
+        "email": "akash@lws.com",
+        "name": "Akash Ahmed"
+      },
+      "message": "hi akash",
+      "timestamp": 1679918169011,
+      "id": 1
+    },
+    {
+      "conversationId": 1,
+      "sender": {
+        "email": "saad@lws.com",
+        "name": "Saad Hasan"
+      },
+      "receiver": {
+        "email": "akash@lws.com",
+        "name": "Akash Ahmed"
+      },
+      "message": "how are yo",
+      "timestamp": 1679918178330,
+      "id": 2
+    },
+    {
+      "conversationId": 1,
+      "sender": {
+        "email": "saad@lws.com",
+        "name": "Saad Hasan"
+      },
+      "receiver": {
+        "email": "akash@lws.com",
+        "name": "Akash Ahmed"
+      },
+      "message": "I'm waiting for you",
+      "timestamp": 1679918202340,
+      "id": 3
+    }
+  ]
 }
