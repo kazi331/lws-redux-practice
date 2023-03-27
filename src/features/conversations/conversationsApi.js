@@ -48,16 +48,15 @@ export const conversationsApi = apiSlice.injectEndpoints({
 
             // silently add message
             async onQueryStarted(args, { queryFulfilled, dispatch }) {
-                const conversation = await queryFulfilled;
-                if (conversation?.data?.id) {
+                const {data} = await queryFulfilled;
+                if (data?.id) {
                     const users = args.data.users;
                     const sender = users.find(user => user.email === args.sender)
                     const receiver = users.find(user => user.email !== args.sender)
 
-
                     // dispatch add message function
                     dispatch(messagesApi.endpoints.addMessage.initiate({
-                        conversationId: conversation.data.id,
+                        conversationId: data.id,
                         sender,
                         receiver,
                         message: args.data.message,
