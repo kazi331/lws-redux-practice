@@ -1,94 +1,16 @@
 {
   "users": [
     {
-      "email": "saad@lws.com",
-      "password": "$2a$10$oG6xQGTWhKRwpIp2jKeINOaEMq8bxzCXMpbovAelmq8V36WY/Ozba",
-      "name": "Saad Hasan",
+      "email": "akash@lws.com",
+      "password": "$2a$10$c9W36MF2urgmzfjO/BZD8uyX022MIkiF7lAXBQR6V6rsEMe.Ytnm.",
+      "name": "Akash Ahmed",
       "id": 1
     },
     {
-      "email": "akash@lws.com",
-      "password": "$2a$10$tUsdCUVUr.CYSC9ie1s3CO7YQgbQclTUkOGO8liRTMFVV/lyyewLi",
-      "name": "Akash Ahmed",
+      "email": "saad@lws.com",
+      "password": "$2a$10$ygxG5fw5CxhvHvkyJ1B1S.tyCqMLJD2qoonruTyAHJoRyqy1P0f2y",
+      "name": "Saad Hasan",
       "id": 2
-    },
-    {
-      "email": "hucysyqa@mailinator.com",
-      "password": "$2a$10$JGUlidQL/VJY9IfaezwhX.o/O20OXbVNysOvwXlAhQSXwZDSlwgcO",
-      "name": "Quinn Rodgers",
-      "id": 3
-    },
-    {
-      "email": "tefa@mailinator.com",
-      "password": "$2a$10$ATfv/gySha4BCFZtHYK6ROI1BY5bs2gDI9K0nIajGvYkLkkZKo/Ha",
-      "name": "Clementine Glenn",
-      "id": 4
-    },
-    {
-      "email": "sywurabeh@mailinator.com",
-      "password": "$2a$10$OtX.UXLHw467xNFnpyFvkOTPp6oTwxac5lj89P5fUFaAMPrcQ8Obi",
-      "name": "Serina Tyson",
-      "id": 5
-    },
-    {
-      "email": "gulyxirife@mailinator.com",
-      "password": "$2a$10$KLU1l1QqlRHFpuvTyETdIO153gL9SqOtVM46PnTLTbGBgD/OrUiYy",
-      "name": "Clarke Potter",
-      "id": 6
-    },
-    {
-      "email": "nicax@mailinator.com",
-      "password": "$2a$10$2SLceaLpop5TDpY9SJvrseWEo/pbb1QeqlMJuywheRocDDyLl/qIy",
-      "name": "Savannah Chavez",
-      "id": 7
-    },
-    {
-      "email": "fypupesi@mailinator.com",
-      "password": "$2a$10$QVB7CWTgwHJ53DPplcCp1OGbJCJ8CGafVRGbDoKbVIoCBZg7Domse",
-      "name": "Julie Porter",
-      "id": 8
-    },
-    {
-      "email": "benakedo@mailinator.com",
-      "password": "$2a$10$7KGJdr7mGSXvw7mHnBA.ZOlXGvi/cdj0xbNBksamoeAp8dgQ6Kpq2",
-      "name": "Emerson Francis",
-      "id": 9
-    },
-    {
-      "email": "cawuzi@mailinator.com",
-      "password": "$2a$10$amm0DdQKrbAiRcSrrnI6UOBD4YJGN6x2nTG7I45nzmKG0ScfX5hSK",
-      "name": "Ignacia Park",
-      "id": 10
-    },
-    {
-      "email": "tulihex@mailinator.com",
-      "password": "$2a$10$lw1vJ0OSgzYEWsvlchPw4uEPnUngbgruPPCe9IJI1I8mUvf17zBQa",
-      "name": "Lane Mclean",
-      "id": 11
-    },
-    {
-      "email": "fuwahecobu@mailinator.com",
-      "password": "$2a$10$MWyE1qk1AoSMakeNvC4lbupYi5.elkR3cDvEhUYAqotZ327qU4Tha",
-      "name": "Russell Roach",
-      "id": 12
-    },
-    {
-      "email": "test@test2.com",
-      "password": "$2a$10$no1/CGkRi6v6Hlky9Fqg6.5aREQcvD44L1jD8yKJ8s6/9E8yZfgVe",
-      "name": "test user",
-      "id": 13
-    },
-    {
-      "email": "biky@mailinator.com",
-      "password": "$2a$10$bUgexof8Y.zSyAom9tn7qeLR160.BYmW5gN0YJj4ajkOgAyhLPL..",
-      "name": "Jolene Bauer",
-      "id": 14
-    },
-    {
-      "email": "tacavyfi@mailinator.com",
-      "password": "$2a$10$A1qL8iNWBaF702K2eUFnFutFwzWPuoB3VjytI0u/vQMa7DZKAkj2i",
-      "name": "Jarrod Brady",
-      "id": 15
     }
   ],
   "conversations": [
@@ -104,25 +26,10 @@
           "name": "Akash Ahmed"
         }
       ],
-      "message": "Nostrud veniam non ",
-      "timestamp": 1679828954120,
+      "message": "I'm fine bro",
+      "timestamp": 1679916307701,
       "id": 1
     }
   ],
-  "messages": [
-    {
-      "conversationId": 1,
-      "sender": {
-        "email": "saad@lws.com",
-        "name": "Saad Hasan"
-      },
-      "receiver": {
-        "email": "akash@lws.com",
-        "name": "Akash Ahmed"
-      },
-      "message": "hello akash",
-      "timestamp": 1679825521233,
-      "id": 1
-    }
-  ]
+  "messages": []
 }
