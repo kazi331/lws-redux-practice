@@ -8,9 +8,9 @@ import gravatarUrl from "gravatar-url";
 import { Link } from "react-router-dom";
 
 export default function ChatItems() {
-    const { user } = useSelector(state => state.auth);
+    const { email } = useSelector(state => state.auth.user);
 
-    const { data: conversations, isLoading, isError, error, } = useGetConversationsQuery(user?.email);
+    const { data: conversations, isLoading, isError, error, } = useGetConversationsQuery(email);
 
 
     let content = null;
@@ -19,12 +19,12 @@ export default function ChatItems() {
     if (!isLoading && !isError && conversations.length < 1) content = <li className="text-center py-2">No conversations found!</li>
     if (!isLoading && !isError && conversations.length > 0) content = conversations.map(conversation => {
         const { id, message, timestamp, users } = conversation || {};
-        const { name, email } = getPartnerInfo(users, user.email);
+        const { name, email:partnerEmail } = getPartnerInfo(users, email);
         
         return <li key={conversation.id}>
             <Link to={`/inbox/${id}`}>
                 <ChatItem
-                    avatar={gravatarUrl(email, { size: 80 })}
+                    avatar={gravatarUrl(partnerEmail, { size: 80 })}
                     name={name}
                     lastMessage={message}
                     lastTime={moment(timestamp).fromNow()}

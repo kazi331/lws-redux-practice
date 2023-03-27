@@ -59,6 +59,36 @@
       "password": "$2a$10$amm0DdQKrbAiRcSrrnI6UOBD4YJGN6x2nTG7I45nzmKG0ScfX5hSK",
       "name": "Ignacia Park",
       "id": 10
+    },
+    {
+      "email": "tulihex@mailinator.com",
+      "password": "$2a$10$lw1vJ0OSgzYEWsvlchPw4uEPnUngbgruPPCe9IJI1I8mUvf17zBQa",
+      "name": "Lane Mclean",
+      "id": 11
+    },
+    {
+      "email": "fuwahecobu@mailinator.com",
+      "password": "$2a$10$MWyE1qk1AoSMakeNvC4lbupYi5.elkR3cDvEhUYAqotZ327qU4Tha",
+      "name": "Russell Roach",
+      "id": 12
+    },
+    {
+      "email": "test@test2.com",
+      "password": "$2a$10$no1/CGkRi6v6Hlky9Fqg6.5aREQcvD44L1jD8yKJ8s6/9E8yZfgVe",
+      "name": "test user",
+      "id": 13
+    },
+    {
+      "email": "biky@mailinator.com",
+      "password": "$2a$10$bUgexof8Y.zSyAom9tn7qeLR160.BYmW5gN0YJj4ajkOgAyhLPL..",
+      "name": "Jolene Bauer",
+      "id": 14
+    },
+    {
+      "email": "tacavyfi@mailinator.com",
+      "password": "$2a$10$A1qL8iNWBaF702K2eUFnFutFwzWPuoB3VjytI0u/vQMa7DZKAkj2i",
+      "name": "Jarrod Brady",
+      "id": 15
     }
   ],
   "conversations": [

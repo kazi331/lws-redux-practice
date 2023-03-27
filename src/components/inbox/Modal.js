@@ -31,7 +31,10 @@ export default function Modal({ open, control }) {
     useEffect(() => {
         if (participant?.length > 0 && participant[0].email !== myEmail) {
             // check conversation existance
-            dispatch(conversationsApi.endpoints.getConversation.initiate({ userEmail: myEmail, partnerEmail: sendTo }))
+            dispatch(conversationsApi.endpoints.getConversation.initiate({
+                userEmail: myEmail,
+                partnerEmail: sendTo
+            }))
                 .unwrap()
                 .then(data => setConversation(data))
                 .catch(err => console.log(err))

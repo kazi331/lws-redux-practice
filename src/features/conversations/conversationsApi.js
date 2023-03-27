@@ -3,9 +3,12 @@ import { messagesApi } from "../messages/messagesApi";
 
 export const conversationsApi = apiSlice.injectEndpoints({
     endpoints: builder => ({
-        getConversations: builder.query({
-            query: (email) => `/conversations?participants_like=${email}&_sort=timestamp&_order=desc&page=1&_limit=${process.env.REACT_APP_CONVERSATIONS_LIMIT}`
-        }),
+        // getConversations: builder.query({
+        //     query: (email) => `/conversations?participants_like=${email}&_sort=timestamp&_order=desc&_page=1&_limit=${process.env.REACT_APP_CONVERSATIONS_LIMIT}`
+        // }),
+            getConversations: builder.query({
+                query: (email) => `/conversations?participants_like=${email}&_sort=timestamp&_order=desc&_page=1&_limit=${process.env.REACT_APP_CONVERSATIONS_PER_PAGE}`,
+            }),
         getConversation: builder.query({
             query: ({ userEmail, partnerEmail }) => `/conversations?participants=${userEmail}-${partnerEmail}&&participants=${partnerEmail}-${userEmail}`
         }),
@@ -22,7 +25,7 @@ export const conversationsApi = apiSlice.injectEndpoints({
                     const users = args.data.users;
                     const sender = users.find(user => user.email === args.sender)
                     const receiver = users.find(user => user.email !== args.sender)
-                    
+
                     // console.log(conversation.data.id)
                     // dispatch add message function
                     dispatch(messagesApi.endpoints.addMessage.initiate({
@@ -51,7 +54,7 @@ export const conversationsApi = apiSlice.injectEndpoints({
                     const sender = users.find(user => user.email === args.sender)
                     const receiver = users.find(user => user.email !== args.sender)
 
-                    
+
                     // dispatch add message function
                     dispatch(messagesApi.endpoints.addMessage.initiate({
                         conversationId: conversation.data.id,

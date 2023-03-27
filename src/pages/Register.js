@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logoImage from "../assets/images/lws-logo-light.svg";
 import Error from "../components/ui/Error";
@@ -18,7 +18,7 @@ export default function Register() {
         setUser({ ...user, [e.target.name]: e.target.value })
     }
 
-    const [register, {  isLoading }] = useRegisterMutation();
+    const [register, { isLoading, isSuccess }] = useRegisterMutation();
 
     const handleSubmit = e => {
         setError(null)
@@ -30,11 +30,13 @@ export default function Register() {
         } else if (!term) {
             setError("Must agree to the TOS")
         } else {
-            register(rest).then(data => data.error ? setError(data?.error.data) : navigate("/inbox"))
-
+            register(rest)
             setError(null)
         }
     }
+    useEffect(() => {
+        if (isSuccess) navigate("/login")
+    }, [isSuccess, navigate])
     return (
         <div className="grid place-items-center h-screen bg-[#F9FAFB">
             <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">

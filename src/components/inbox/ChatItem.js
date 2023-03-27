@@ -1,4 +1,3 @@
-import { IncomingIcon, OutgoingIcon } from "../ui/Icons";
 
 export default function ChatItem({ avatar, name, lastMessage, lastTime }) {
     return (
