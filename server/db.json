@@ -11,6 +11,12 @@
       "password": "$2a$10$ygxG5fw5CxhvHvkyJ1B1S.tyCqMLJD2qoonruTyAHJoRyqy1P0f2y",
       "name": "Saad Hasan",
       "id": 2
+    },
+    {
+      "email": "sayem@khan.com",
+      "password": "$2a$10$7RdrtFK6yASwhVBEe23zCeB94khNc6LrPqgGRXBfzcqvORBxo/7WG",
+      "name": "sayem khan",
+      "id": 3
     }
   ],
   "conversations": [
@@ -29,6 +35,22 @@
       "message": "I'm waiting for you",
       "timestamp": 1679918202340,
       "id": 1
+    },
+    {
+      "participants": "sayem@khan.com-saad@lws.com",
+      "users": [
+        {
+          "email": "saad@lws.com",
+          "name": "Saad Hasan"
+        },
+        {
+          "email": "sayem@khan.com",
+          "name": "sayem khan"
+        }
+      ],
+      "message": "hey saad,",
+      "timestamp": 1679932513230,
+      "id": 2
     }
   ],
   "messages": [
@@ -73,6 +95,20 @@
       "message": "I'm waiting for you",
       "timestamp": 1679918202340,
       "id": 3
+    },
+    {
+      "conversationId": 2,
+      "sender": {
+        "email": "sayem@khan.com",
+        "name": "sayem khan"
+      },
+      "receiver": {
+        "email": "saad@lws.com",
+        "name": "Saad Hasan"
+      },
+      "message": "hey saad,",
+      "timestamp": 1679932513230,
+      "id": 4
     }
   ]
 }

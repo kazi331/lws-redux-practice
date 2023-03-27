@@ -5,30 +5,7 @@ export const authApi = apiSlice.injectEndpoints({
     endpoints: builder => ({
         // endpoints here
 
-        // register: builder.mutation({
-        //     query: (user) => ({
-        //         url: '/register',
-        //         method: 'POST',
-        //         body: user
-        //     }),
-        //     async onQueryStarted(arg, { queryFulfilled, dispatch }) {
-        //         try {
-        //             const result = await queryFulfilled;
-
-        //             // set user data to localstorage
-        //             localStorage.setItem("auth", JSON.stringify({
-        //                 accessToken: result.data.accessToken,
-        //                 user: result.data.user
-        //             }))
-
-        //             // dispatch to update redux store
-        //             dispatch(userLoggedIn({
-        //                 accessToken: result.data.accessToken,
-        //                 user: result.data.user
-        //             }))
-        //         } catch (error) { }
-        //     }
-        // }),
+      
 
         register: builder.mutation({
             query: (data) => ({

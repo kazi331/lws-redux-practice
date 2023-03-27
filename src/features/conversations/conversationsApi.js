@@ -1,4 +1,5 @@
 import { apiSlice } from "../api/apliSlice";
+import { userLoggedOut } from "../auth/authSlice";
 import { messagesApi } from "../messages/messagesApi";
 
 export const conversationsApi = apiSlice.injectEndpoints({
@@ -6,9 +7,18 @@ export const conversationsApi = apiSlice.injectEndpoints({
         // getConversations: builder.query({
         //     query: (email) => `/conversations?participants_like=${email}&_sort=timestamp&_order=desc&_page=1&_limit=${process.env.REACT_APP_CONVERSATIONS_LIMIT}`
         // }),
-            getConversations: builder.query({
-                query: (email) => `/conversations?participants_like=${email}&_sort=timestamp&_order=desc&_page=1&_limit=${process.env.REACT_APP_CONVERSATIONS_PER_PAGE}`,
-            }),
+        getConversations: builder.query({
+            query: (email) => `/conversations?participants_like=${email}&_sort=timestamp&_order=desc&_page=1&_limit=${process.env.REACT_APP_CONVERSATIONS_PER_PAGE}`,
+            async onQueryStarted(args, { dispatch, queryFulfilled }) {
+                try {
+                    await queryFulfilled;
+                } catch (err) {
+                    if (err.error.status === 401) {
+                        dispatch(userLoggedOut())
+                    };
+                }
+            }
+        }),
         getConversation: builder.query({
             query: ({ userEmail, partnerEmail }) => `/conversations?participants=${userEmail}-${partnerEmail}&&participants=${partnerEmail}-${userEmail}`
         }),
@@ -48,7 +58,7 @@ export const conversationsApi = apiSlice.injectEndpoints({
 
             // silently add message
             async onQueryStarted(args, { queryFulfilled, dispatch }) {
-                const {data} = await queryFulfilled;
+                const { data } = await queryFulfilled;
                 if (data?.id) {
                     const users = args.data.users;
                     const sender = users.find(user => user.email === args.sender)
