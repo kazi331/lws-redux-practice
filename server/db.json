@@ -1,114 +1,24 @@
 {
   "users": [
     {
-      "email": "akash@lws.com",
-      "password": "$2a$10$c9W36MF2urgmzfjO/BZD8uyX022MIkiF7lAXBQR6V6rsEMe.Ytnm.",
-      "name": "Akash Ahmed",
+      "email": "sayem@khan.com",
+      "password": "$2a$10$J5ufJVjJBfHPQ5V/b.AxYuowxZxvNfKrAPryObxez22LwGz1gS5/K",
+      "name": "sayem khan",
       "id": 1
     },
     {
       "email": "saad@lws.com",
-      "password": "$2a$10$ygxG5fw5CxhvHvkyJ1B1S.tyCqMLJD2qoonruTyAHJoRyqy1P0f2y",
+      "password": "$2a$10$RqoeDoWSFCy3PHyjrql0eO8dSwKyXPNc/Bwblg.sEg8GRDQXcdT5K",
       "name": "Saad Hasan",
       "id": 2
     },
     {
-      "email": "sayem@khan.com",
-      "password": "$2a$10$7RdrtFK6yASwhVBEe23zCeB94khNc6LrPqgGRXBfzcqvORBxo/7WG",
-      "name": "sayem khan",
+      "email": "akash@lws.com",
+      "password": "$2a$10$rzLh4DiXP99DM/glyQAvEeVQ1tlCL.cdr0cyIqnZvCJ2LmHDgoL1S",
+      "name": "Akash Ahmed",
       "id": 3
     }
   ],
-  "conversations": [
-    {
-      "participants": "saad@lws.com-akash@lws.com",
-      "users": [
-        {
-          "email": "akash@lws.com",
-          "name": "Akash Ahmed"
-        },
-        {
-          "email": "saad@lws.com",
-          "name": "Saad Hasan"
-        }
-      ],
-      "message": "I'm waiting for you",
-      "timestamp": 1679918202340,
-      "id": 1
-    },
-    {
-      "participants": "sayem@khan.com-saad@lws.com",
-      "users": [
-        {
-          "email": "saad@lws.com",
-          "name": "Saad Hasan"
-        },
-        {
-          "email": "sayem@khan.com",
-          "name": "sayem khan"
-        }
-      ],
-      "message": "hey saad,",
-      "timestamp": 1679932513230,
-      "id": 2
-    }
-  ],
-  "messages": [
-    {
-      "conversationId": 1,
-      "sender": {
-        "email": "saad@lws.com",
-        "name": "Saad Hasan"
-      },
-      "receiver": {
-        "email": "akash@lws.com",
-        "name": "Akash Ahmed"
-      },
-      "message": "hi akash",
-      "timestamp": 1679918169011,
-      "id": 1
-    },
-    {
-      "conversationId": 1,
-      "sender": {
-        "email": "saad@lws.com",
-        "name": "Saad Hasan"
-      },
-      "receiver": {
-        "email": "akash@lws.com",
-        "name": "Akash Ahmed"
-      },
-      "message": "how are yo",
-      "timestamp": 1679918178330,
-      "id": 2
-    },
-    {
-      "conversationId": 1,
-      "sender": {
-        "email": "saad@lws.com",
-        "name": "Saad Hasan"
-      },
-      "receiver": {
-        "email": "akash@lws.com",
-        "name": "Akash Ahmed"
-      },
-      "message": "I'm waiting for you",
-      "timestamp": 1679918202340,
-      "id": 3
-    },
-    {
-      "conversationId": 2,
-      "sender": {
-        "email": "sayem@khan.com",
-        "name": "sayem khan"
-      },
-      "receiver": {
-        "email": "saad@lws.com",
-        "name": "Saad Hasan"
-      },
-      "message": "hey saad,",
-      "timestamp": 1679932513230,
-      "id": 4
-    }
-  ]
+  "conversations": [],
+  "messages": []
 }

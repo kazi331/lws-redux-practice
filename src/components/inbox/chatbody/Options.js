@@ -2,17 +2,11 @@ import { useSelector } from "react-redux";
 import { useEditConversationMutation } from "../../../features/conversations/conversationsApi";
 
 export default function Options({ messages }) {
-    // const [message, setMessage] = useState("")
     const { conversationId, sender, receiver } = messages[0]
     const { user: me } = useSelector(state => state.auth) || {}
-    console.log(sender, receiver)
-
     const sendTo = sender.email === me.email ? receiver.email : sender.email;
 
-
-
     const [editConversation] = useEditConversationMutation();
-
 
     const handleSubmit = async e => {
         e.preventDefault();
@@ -32,12 +26,6 @@ export default function Options({ messages }) {
         e.target.message.value = ""
 
     }
-
-    // useEffect(() => {
-    //     if (isSuccess) {
-    //         console.log("success")
-    //     }
-    // }, [isSuccess])
 
     return (
         <form onSubmit={handleSubmit} className="flex items-center justify-between w-full p-3 border-t border-gray-300">

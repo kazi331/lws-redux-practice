@@ -89,7 +89,8 @@ export default function Modal({ open, control }) {
         } else if (conversation.length === 0) {
             // add conversation 
             addConversation({
-                sender: myEmail, data: {
+                sender: myEmail,
+                data: {
                     participants: `${myEmail}-${sendTo}`,
                     users: [
                         { email: participant[0].email, name: participant[0].name },
