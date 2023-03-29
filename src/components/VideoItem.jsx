@@ -13,7 +13,7 @@ const VideoItem = ({ video }) => {
         dispatch(updateVideo(id));
     };
 
-    console.log("[VideoItem] renders");
+    // console.log("[VideoItem] renders");
 
     return (
         <li className="flex justify-between py-2">

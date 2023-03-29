@@ -2,6 +2,7 @@ import React from "react";
 import AddVideo from "./components/AddVideo";
 import AllVideos from "./components/Allvideos";
 import Filters from "./components/Filters";
+import UnWatchedVideos from "./components/UnWatchedVideos";
 import WatchedVideos from "./components/WatchedVideos";
 
 function App() {
@@ -21,6 +22,14 @@ function App() {
             <span className="font-bold">Watched Videos</span>
           </div>
           <WatchedVideos />
+        </div>
+      </div>
+      <div className="flex w-full">
+        <div className="w-full border border-slate-400 p-6 space-y-8">
+          
+            <span className="font-bold">UnWatched Videos</span>
+            <UnWatchedVideos />
+          
         </div>
       </div>
     </div>
