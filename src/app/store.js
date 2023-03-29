@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import filtersReducer from "../features/filters/filterSlice";
-import videosReducer from "../features/videos/videoSlice";
+import videoSlice from '../features/videos/videoSlice'
+import filterSlice from '../features/filters/filterSlice'
+
+
 
 export const store = configureStore({
     reducer: {
-        videos: videosReducer,
-        filters: filtersReducer,
+        videos: videoSlice,
+        filters: filterSlice,
     },
 });

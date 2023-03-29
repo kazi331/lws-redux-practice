@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { updateVideo } from "../features/videos/videoSlice";
 
+
 const VideoItem = ({ video }) => {
     const { title, link, watched, id } = video;
     const dispatch = useDispatch();
@@ -27,4 +28,4 @@ const VideoItem = ({ video }) => {
     );
 }
 
-export default React.memo(VideoItem)
+export default VideoItem
